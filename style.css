@@ -293,6 +293,24 @@ a:hover {
 }
 
 /*====================================
+  Homeowner Contract Download Section
+====================================*/
+.contract-download-section {
+  padding: 4rem var(--gap);
+  text-align: center;
+  background-color: var(--offwhite);
+  color: var(--navy);
+  border-top: 1px solid rgba(10, 25, 47, 0.1);
+}
+.contract-download-section h2 {
+  margin-bottom: 1rem;
+}
+.contract-download-section p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+/*====================================
   Contact Section
 ====================================*/
 .contact {
