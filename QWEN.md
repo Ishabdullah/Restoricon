@@ -1,15 +1,15 @@
-# CADRE & CONSILIUM GROUP, LLC — PROJECT ARCHITECTURE & CONTEXT
+# RESTORICON, LLC — PROJECT ARCHITECTURE & CONTEXT
 
 ## 1. Executive Summary & Brand Identity
-- **Company Name:** Cadre & Consilium Group, LLC
-- **Primary Domain/Hosting:** GitHub Pages (`https://ishabdullah.github.io/Cadre/`)
-- **Repository:** `https://github.com/Ishabdullah/Cadre.git`
-- **Contact Email:** `cadre.projectmanager@gmail.com`
+- **Company Name:** Restoricon, LLC
+- **Primary Domain/Hosting:** GitHub Pages (`https://ishabdullah.github.io/Restoricon/`)
+- **Repository:** `https://github.com/Ishabdullah/Restoricon.git`
+- **Contact Email:** `restoricon@gmail.com`
 - **Design Palette:** Custom CSS properties (`--navy: #0A192F`, `--charcoal: #1E293B`, `--bronze: #C5A059`, `--offwhite: #F8FAFC`).
 
 ## 2. Directory Tree & File Map
 ```text
-cadre/
+restoricon/
 ├── QWEN.md                 # Project architecture & context memory file
 ├── index.html              # Main landing page & single-page application entry point
 ├── style.css               # Centralized semantic stylesheet (Flexbox/Grid, media queries)
@@ -18,7 +18,7 @@ cadre/
 │   ├── documents/         # Static MSA agreements, contracts, and templates
 │   ├── images/            # Project photos and background visuals
 │   └── logos/
-│       └── cadre-logo.png # High-res brand logo (constrained max-width)
+│       └── restoricon-logo.png # High-res brand logo (constrained max-width)
 └── pages/                  # Multi-page routing sub-directory
     ├── about.html          # Extended company vision & leadership details
     ├── contact.html        # Primary contact page with form validation
@@ -35,7 +35,7 @@ cadre/
 
 ## 4. Key Interactive Components & Logic
 - **Subcontractor Onboarding Modal:** Triggered via `#subcontractorModal` buttons in `script.js`. Handles license verification toggles, MSA preview/downloads, and Formspree AJAX posting.
-- **Contact Form Submission:** Handles `#contactForm` via `fetch()` to Formspree endpoint (targeting `cadre.projectmanager@gmail.com`).
+- **Contact Form Submission:** Handles `#contactForm` via `fetch()` to Formspree endpoint (targeting `restoricon@gmail.com`).
 - **Services Grid (6 Core Cards):**
   1. Full Home Remodeling & Additions
   2. Kitchen & Bathroom Renovations
@@ -48,7 +48,7 @@ cadre/
 - Always stage all project directories using `git add -A`.
 - Keep changes modular across `index.html`, `style.css`, `script.js`, and `pages/`.
 - Maintain clean, descriptive commit messages.
-- Save this file as `/data/data/com.termux/files/home/cadre/QWEN.md`, then commit and push it to GitHub:
+- Save this file as `/data/data/com.termux/files/home/restoricon/QWEN.md`, then commit and push it to GitHub:
 ```bash
 git add QWEN.md
 git commit -m "Created QWEN.md context memory file for project architecture"

@@ -1,12 +1,12 @@
-// Cadre & Consilium Group, LLC - Main JavaScript
+// Restoricon, LLC - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("CADRE JS Loaded Successfully");
+    console.log("RESTORICON JS Loaded Successfully");
 
     // ==========================================
     // UTILITY FUNCTIONS
     // ==========================================
-    const MAILTO_EMAIL = 'cadre.projectmanager@gmail.com';
+    const MAILTO_EMAIL = 'restoricon@gmail.com';
 
     function buildMailtoUrl(subject, body) {
         const encodedSubject = encodeURIComponent(subject);
