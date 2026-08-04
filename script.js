@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ==========================================
     // UTILITY FUNCTIONS
     // ==========================================
-    const MAILTO_EMAIL = 'restoricon@gmail.com';
+    const MAILTO_EMAIL = 'contact@restoricon.com';
 
     function buildMailtoUrl(subject, body) {
         const encodedSubject = encodeURIComponent(subject);
