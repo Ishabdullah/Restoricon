@@ -45,12 +45,19 @@ Everything is relative to the single root: `style.css`, `script.js`, and `assets
   6. Pre-Claim Construction & Repair Estimate (opens its own detailed modal with a 5-step process + compliance disclosures)
 
 ## 5. Known Gaps (do not fabricate to fill these — ask the business owner)
-- No street address (service-area business — Connecticut / Hartford County described generally, no towns claimed as service area except in form placeholder text).
+- No street address (service-area business — Connecticut / Hartford County described generally).
 - No CT HIC license number given (site self-describes as "a licensed General Contractor (CT HIC)" without a number).
 - No real social media profile URLs.
 - No project photos (`assets/images/` is empty), no testimonials, no reviews, no years-in-business figure.
 
-## 6. Deployment & Git Standards
+## 6. Service Area
+Restoricon confirmed (2026-08-04) that it serves all 29 towns/cities in Hartford County, CT: Avon, Berlin, Bloomfield, Bristol, Burlington, Canton, East Granby, East Hartford, East Windsor, Enfield, Farmington, Glastonbury, Granby, Hartford, Hartland, Manchester, Marlborough, New Britain, Newington, Plainville, Rocky Hill, Simsbury, South Windsor, Southington, Suffield, West Hartford, Wethersfield, Windsor, Windsor Locks.
+
+All 29 are currently listed only in the `GeneralContractor` JSON-LD `areaServed` array in `index.html` (structured data — read by search engines/AI, not shown to visitors). No visible on-page copy names individual towns yet, and there are no per-town sections or pages.
+
+**Planned future work:** dedicated town-specific sections or sub-pages (one per town, or grouped), each with genuinely local content (not just the town name swapped into boilerplate) — the strongest local-SEO lever available, but real content work. See the chat response following the 2026-08-04 area-served update for the list of what's needed (project photos per area, town-specific copy, possibly a directory/index page, and — if built as separate pages rather than sections — a move off the current single-page architecture for that subset of the site).
+
+## 7. Deployment & Git Standards
 - Stage specific files by name; avoid blind `git add -A` if untracked scratch/generated files may be present (e.g. `assets/documents/*.py`, `extracted/`, `verify_final/` are gitignored on purpose).
 - Keep changes modular across `index.html`, `style.css`, `script.js`.
 - Maintain clean, descriptive commit messages.
