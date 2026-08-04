@@ -16,6 +16,34 @@ html {
   scroll-behavior: smooth;
   font-size: 100%; /* 16px */
 }
+
+/* Accessibility utilities */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  background: var(--bronze);
+  color: var(--navy);
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  z-index: 3000;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0.5rem;
+}
 body {
   margin: 0;
   font-family: var(--font-stack);
@@ -169,6 +197,13 @@ a:hover {
 .cta-secondary {
   margin-top: 0.75rem;
 }
+.hero-subcontractor-link {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+}
+.hero-subcontractor-link a {
+  color: rgba(248, 250, 252, 0.8);
+}
 
 .hero-logo {
   width: 80%;
@@ -218,11 +253,17 @@ a:hover {
   width: 48px;
   height: 48px;
   margin-bottom: 0.5rem;
+  fill: currentColor; /* icons must inherit --offwhite, not the hardcoded navy fill baked into each SVG's markup */
 }
 .service-card h3 {
   font-size: 1.125rem;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
+}
+.service-card p {
+  font-size: 0.9rem;
+  color: rgba(248, 250, 252, 0.85);
+  margin: 0;
 }
 
 /* Service Card Badge & CTA */
@@ -291,6 +332,54 @@ a:hover {
   background-color: var(--offwhite);
   color: var(--navy);
 }
+.about-highlights {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  text-align: left;
+}
+.highlight-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+/*====================================
+  FAQ Section
+====================================*/
+.faq-section {
+  padding: 4rem var(--gap);
+  background-color: var(--charcoal);
+  color: var(--offwhite);
+}
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 1.5rem;
+}
+.faq-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.faq-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: var(--bronze);
+}
+.faq-item p {
+  margin: 0;
+}
 
 /*====================================
   Homeowner Contract Download Section
@@ -323,6 +412,9 @@ a:hover {
   margin-bottom: 2rem;
 }
 .radio-selector {
+  border: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -567,7 +659,7 @@ button:hover {
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(248, 250, 252, 0.4);
+  color: rgba(248, 250, 252, 0.65);
 }
 .form-group small {
   display: block;
@@ -910,6 +1002,11 @@ button:hover {
 .notice-icon {
   font-size: 1.1rem;
 }
+.disclaimer-inline {
+  font-size: 0.85rem;
+  color: rgba(248, 250, 252, 0.75);
+  margin-top: 0.75rem;
+}
 
 /* What We Inspect */
 .inspection-categories {
@@ -1050,7 +1147,7 @@ button:hover {
 }
 #preClaimForm .form-group input::placeholder,
 #preClaimForm .form-group textarea::placeholder {
-  color: rgba(248, 250, 252, 0.4);
+  color: rgba(248, 250, 252, 0.65);
 }
 #preClaimForm .modal-actions {
   display: flex;

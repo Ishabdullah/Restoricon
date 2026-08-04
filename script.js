@@ -1,7 +1,6 @@
 // Restoricon, LLC - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("RESTORICON JS Loaded Successfully");
 
     // ==========================================
     // UTILITY FUNCTIONS
@@ -56,16 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return firstInvalid;
     }
 
-    function getFormValue(form, fieldConfigs) {
-        for (const config of fieldConfigs) {
-            const field = form.querySelector(config.selector);
-            if (field && field.value.trim()) {
-                return field.value.trim();
-            }
-        }
-        return config?.default || '';
-    }
-
     // ==========================================
     // 1. MOBILE NAV TOGGLE (Direct handler - no delegation needed)
     // ==========================================
@@ -109,44 +98,90 @@ document.addEventListener('DOMContentLoaded', function () {
     // ==========================================
     // 3. GLOBAL MODAL CONTROL HANDLER (Event Delegation)
     // ==========================================
+    // Modals are tracked as a stack so that closing the topmost modal
+    // (e.g. the nested Agreement modal opened from within the Subcontractor
+    // modal) never closes the modal(s) underneath it, and so focus returns
+    // to whatever element opened each modal.
+    const modalStack = [];
+    const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    function openModal(modal, triggerEl) {
+        if (!modal) return;
+        modal._lastFocused = triggerEl || document.activeElement;
+        modal.style.display = 'block';
+        modalStack.push(modal);
+        const focusTarget = modal.querySelector('.modal-close') || modal.querySelector(FOCUSABLE_SELECTOR);
+        if (focusTarget) focusTarget.focus();
+    }
+
+    function closeModal(modal) {
+        if (!modal) return;
+        const idx = modalStack.indexOf(modal);
+        if (idx !== -1) modalStack.splice(idx, 1);
+        modal.style.display = 'none';
+        if (modal._lastFocused && typeof modal._lastFocused.focus === 'function') {
+            modal._lastFocused.focus();
+        }
+    }
+
+    function closeTopModal() {
+        const modal = modalStack[modalStack.length - 1];
+        if (modal) closeModal(modal);
+    }
+
     document.addEventListener('click', function (e) {
         // Open Pre-Claim Modal
         if (e.target.closest('#openPreClaimModal') || e.target.closest('.pre-claim-cta')) {
             e.preventDefault();
-            const modal = document.getElementById('preClaimModal');
-            if (modal) modal.style.display = 'block';
+            openModal(document.getElementById('preClaimModal'), e.target);
         }
 
         // Open Subcontractor Modal
-        if (e.target.closest('#openSubcontractorModal') || e.target.closest('#openSubcontractorModalHero') || e.target.closest('.subcontractor-cta')) {
+        if (e.target.closest('#openSubcontractorModal') || e.target.closest('.subcontractor-cta')) {
             e.preventDefault();
-            const modal = document.getElementById('subcontractorModal');
-            if (modal) modal.style.display = 'block';
+            openModal(document.getElementById('subcontractorModal'), e.target);
         }
 
-        // Close any open modal via X or Close button
-        if (e.target.matches('.modal-close, .modal-close-btn, .close-modal') || e.target.closest('.modal-close, .close-modal')) {
+        // Close only the specific modal the close button/X belongs to
+        const closeTrigger = e.target.closest('.modal-close, .modal-close-btn, .close-modal');
+        if (closeTrigger) {
             e.preventDefault();
-            document.querySelectorAll('.modal-overlay').forEach(m => m.style.display = 'none');
+            closeModal(closeTrigger.closest('.modal-overlay'));
         }
 
         // Open Agreement Terms Modal
         if (e.target.closest('#reviewAgreementBtn')) {
             e.preventDefault();
-            const modal = document.getElementById('agreementModal');
-            if (modal) modal.style.display = 'block';
+            openModal(document.getElementById('agreementModal'), e.target);
         }
 
-        // Close modal when clicking outside content (backdrop click)
+        // Close modal when clicking outside content (backdrop click) —
+        // only the overlay that was actually clicked, not every open modal.
         if (e.target.classList.contains('modal-overlay')) {
-            e.target.style.display = 'none';
+            closeModal(e.target);
         }
     });
 
-    // Close modal on Escape key
+    // Escape closes only the topmost (most recently opened) modal, and Tab
+    // is trapped inside it so keyboard focus can't escape to background content.
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
-            document.querySelectorAll('.modal-overlay[style*="display: block"]').forEach(m => m.style.display = 'none');
+            closeTopModal();
+            return;
+        }
+        if (e.key === 'Tab' && modalStack.length) {
+            const modal = modalStack[modalStack.length - 1];
+            const focusable = Array.from(modal.querySelectorAll(FOCUSABLE_SELECTOR));
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
         }
     });
 

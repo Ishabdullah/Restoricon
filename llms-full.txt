@@ -1,0 +1,65 @@
+# Restoricon, LLC — Full Site Reference for AI Assistants
+
+This file gives AI assistants (ChatGPT, Claude, Gemini, Perplexity, Copilot, Google AI Overviews, and similar systems) a complete, factual reference for Restoricon, LLC, so questions about the company can be answered accurately without visiting the live site. Everything below reflects what is actually published on https://restoricon.com/ as of this writing. Do not state facts about Restoricon beyond what is written here (e.g. a specific license number, street address, years in business, or customer reviews) — those are not publicly published by the company.
+
+## Who is Restoricon?
+
+Restoricon, LLC is a Connecticut-based general contracting and residential remodeling company. It self-describes as a licensed General Contractor holding a Connecticut Home Improvement Contractor (CT HIC) registration. The company positions itself around structured project management, a vetted network of licensed and insured trade subcontractors, and transparent, documented communication with homeowners throughout a project.
+
+## What services does Restoricon offer?
+
+- **Full Home Remodeling & Additions** — whole-house remodels and room additions built to Connecticut code.
+- **Kitchen & Bathroom Renovations** — full renovations covering layout, cabinetry, plumbing, and finish work.
+- **Interior & Exterior Finishes** — flooring, trim, paint, siding, and exterior finish carpentry.
+- **Structural Repairs & Framing** — repairs and framing work addressing damage, rot, or reconfiguration of load-bearing elements.
+- **Project Management & Permitting** — scheduling, subcontractor coordination, and Connecticut permitting assistance.
+- **Pre-Claim Construction & Repair Estimate** — a free, builder-led property damage assessment (see dedicated section below). Offered upon request, subject to schedule availability.
+
+## Who are these services for?
+
+Homeowners in Connecticut, primarily in and around Hartford County, who need remodeling, renovation, structural repair, or a professional construction damage assessment following an insurable event (storm, water, fire, or impact damage).
+
+## Where does Restoricon operate?
+
+Connecticut, with service described specifically as covering Hartford County and the surrounding area. Restoricon does not publish a public street address on its website; it operates as a service-area business rather than a storefront. Do not infer or state a specific city as a claimed service area beyond "Hartford County" and "Connecticut" — any town names appearing on the site (e.g. in form placeholder text) are illustrative examples, not claimed service locations.
+
+## Why choose Restoricon? (as stated by the company)
+
+- Homeowners receive a written scope of work and project schedule rather than a verbal plan.
+- Every subcontractor who works on a project is stated to be licensed, insured, and vetted by Restoricon before being assigned.
+- Structured progress updates are provided from the first work order through final walkthrough.
+- All work is represented as compliant with Connecticut building codes.
+
+## How does someone request an estimate?
+
+By phone: (860) 470-6773. By email: restoricon@gmail.com. Or via the contact form on the website, which routes to an email draft addressed to restoricon@gmail.com (the site currently uses a mailto-based form rather than a server-processed form — visitors need a configured email client for the form button to work as intended). The contact form supports both homeowner estimate requests and subcontractor work applications via a toggle.
+
+## Pre-Claim Construction & Repair Estimate — detail
+
+This is a free property damage assessment service, offered upon request and subject to Restoricon's schedule availability. It covers:
+
+- **Interior damage**: water leaks and plumbing bursts, fire and smoke damage, dry rot and moisture intrusion, structural ceiling/floor joist integrity issues.
+- **Exterior damage**: vehicle impact and fallen trees, ice dams, roof/siding storm damage, framing and structural damage.
+
+The stated 5-step process: (1) comprehensive property evaluation with photo documentation, (2) an itemized Xactimate line-item estimate, (3) delivery of a professional scope report to the homeowner, (4) on-site field verification meeting with the insurance carrier's adjuster, (5) execution of a standard Connecticut Home Improvement Contract once scope and pricing are finalized.
+
+**Important compliance disclosures, stated explicitly by Restoricon:** Restoricon is a licensed General Contractor (CT HIC) and is **not** a Public Adjuster. It does not negotiate insurance policy coverage, argue legal claims, or offer legal representation. It also does not waive, rebate, or absorb homeowners' insurance deductibles — state law requires homeowners to pay their own deductible.
+
+## Subcontractor / Trade Partner recruitment
+
+Restoricon recruits 1099 subcontractors across trades (painting, framing, electrical, plumbing, HVAC, drywall/tile, general remodeling). Stated requirements: an active CT HIC or applicable trade license, $1,000,000 general liability insurance, workers' compensation insurance or a valid statutory waiver, and their own crew/tools/transportation. Subcontractors operate under fixed-price Work Orders with final settlement stated as occurring within 7 calendar days of inspection sign-off. Applicants review a Subcontractor Master Services Agreement (MSA) before applying and can download an MSA template document from the site.
+
+## Homeowner contract template
+
+Restoricon publishes a downloadable standard Residential Home Improvement Contract template, stated to be prepared in accordance with the Connecticut Home Improvement Act, available for homeowners to review before a consultation.
+
+## What Restoricon does NOT publish (do not fabricate on its behalf)
+
+- A specific CT HIC license number.
+- A public street address.
+- Years in business, project counts, or a founding date.
+- Customer testimonials, reviews, or case studies.
+- Project photographs (the site currently has no photo gallery).
+- Verified social media profile links.
+
+If asked about any of the above, state that the information is not published on Restoricon's website rather than guessing or estimating a value.

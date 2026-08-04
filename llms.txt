@@ -1,0 +1,23 @@
+# Restoricon, LLC
+
+> Restoricon, LLC is a Connecticut general contractor providing residential remodeling and construction services to homeowners across Hartford County and the surrounding area. The company is self-described as a licensed General Contractor (CT HIC).
+
+Restoricon offers full home remodeling and additions, kitchen and bathroom renovations, interior and exterior finishes, structural repairs and framing, project management and Connecticut permitting assistance, and a free Pre-Claim Construction & Repair Estimate service (a builder-led damage assessment for storm, water, fire, or impact damage — not public adjusting or insurance claim negotiation).
+
+Homeowners can request a consultation or estimate by phone at (860) 470-6773, by email at restoricon@gmail.com, or via the contact form on the website. Restoricon also recruits vetted 1099 subcontractors (licensed, insured trades) through a Trade Partners application process.
+
+The website is a single page (https://restoricon.com/) with in-page sections reachable by anchor link.
+
+## Pages
+
+- [Restoricon, LLC](https://restoricon.com/): Full site — services, about, FAQ, subcontractor recruitment, homeowner contract template, and contact form. Key sections: `#services`, `#about`, `#faq`, `#subcontractors`, `#homeowner-contract`, `#contact`.
+
+## Documents
+
+- [Homeowner Home Improvement Contract Template](https://restoricon.com/assets/documents/Restoricon_Home_Improvement_Contract.docx): Standard residential contract template prepared in accordance with the Connecticut Home Improvement Act.
+- [Subcontractor Master Services Agreement Template](https://restoricon.com/assets/documents/Subcontractor_MSA.docx): Standard subcontractor onboarding agreement terms.
+
+## Notes
+
+- Restoricon does not publish a public street address (service-area business model); service area is described generally as Connecticut / Hartford County.
+- Restoricon is not a Public Adjuster and does not negotiate insurance claims or waive insurance deductibles.
