@@ -4,7 +4,7 @@
 - **Company Name:** Restoricon, LLC
 - **Primary Domain:** `https://restoricon.com` (custom domain via `CNAME`, GitHub Pages hosting, HTTPS enforced)
 - **Repository:** `https://github.com/Ishabdullah/Restoricon.git`
-- **Contact:** Phone `(860) 470-6773`, Email `restoricon@gmail.com`
+- **Contact:** Phone `(860) 337-1820`, Email `restoricon@gmail.com`
 - **Design Palette:** CSS custom properties in `style.css` (`--navy: #0A192F`, `--charcoal: #1E293B`, `--bronze: #D4AF37`, `--offwhite: #F8FAFC`).
 
 ## 2. Actual Directory Structure (verified against repo, not aspirational)
