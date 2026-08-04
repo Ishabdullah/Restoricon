@@ -165,7 +165,8 @@ a:hover {
     transition: max-height 0.3s ease;
   }
   .nav-menu.open {
-    max-height: 24rem; /* enough for all items */
+    max-height: 40rem; /* enough for all 6 items + padding */
+    overflow-y: auto;
   }
   .nav-menu li {
     padding: var(--gap);
@@ -207,16 +208,18 @@ a:hover {
 
 .hero-logo {
   width: 80%;
-  max-width: 320px;
-  height: auto;
+  max-width: 640px; /* 2x horizontal */
+  height: 416px; /* 1.3x the original 320px vertical size */
+  object-fit: fill;
   display: block;
   margin: 0 auto 1.5rem auto;
 }
 
 @media (max-width: 768px) {
   .hero-logo {
-    width: 220px;
+    width: 440px; /* 2x horizontal */
     max-width: 85%;
+    height: 286px; /* 1.3x the original 220px vertical size */
   }
 }
 
@@ -332,11 +335,16 @@ a:hover {
   background-color: var(--offwhite);
   color: var(--navy);
 }
+.about > p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .about-highlights {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  max-width: var(--max-width);
+  max-width: 700px;
   margin: 2rem auto 0;
   text-align: left;
 }
