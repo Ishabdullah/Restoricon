@@ -379,6 +379,32 @@ a:hover {
 }
 
 /*====================================
+  Founders Note Section
+====================================*/
+.founders-note {
+  padding: 4rem var(--gap);
+  background-color: #FFFFFF;
+  color: var(--navy);
+}
+.founders-note h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.founders-note p {
+  max-width: 700px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.7;
+}
+.founders-note p:last-of-type {
+  margin-bottom: 0;
+}
+.founders-signoff {
+  text-align: right;
+  font-style: italic;
+  color: var(--charcoal);
+}
+
+/*====================================
   FAQ Section
 ====================================*/
 .faq-section {
