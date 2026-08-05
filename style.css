@@ -383,17 +383,18 @@ a:hover {
 ====================================*/
 .founders-note {
   padding: 4rem var(--gap);
-  background-color: #FFFFFF;
-  color: var(--navy);
+  text-align: center;
+  background-color: var(--offwhite);
+  color: #000000;
 }
 .founders-note h2 {
-  text-align: center;
   margin-bottom: 1.5rem;
 }
 .founders-note p {
   max-width: 700px;
   margin: 0 auto 1.25rem;
   line-height: 1.7;
+  text-align: left;
 }
 .founders-note p:last-of-type {
   margin-bottom: 0;
@@ -401,7 +402,7 @@ a:hover {
 .founders-signoff {
   text-align: right;
   font-style: italic;
-  color: var(--charcoal);
+  color: #000000;
 }
 
 /*====================================
