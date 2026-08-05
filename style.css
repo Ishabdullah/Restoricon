@@ -1277,6 +1277,7 @@ button:hover {
 .kitchen-intro {
   padding: 4rem var(--gap) 1rem;
   text-align: center;
+  background-color: var(--offwhite);
 }
 .kitchen-intro .lead {
   max-width: 700px;
@@ -1289,11 +1290,13 @@ button:hover {
   padding: 3rem var(--gap) 4rem;
   max-width: var(--max-width);
   margin: 0 auto;
+  background-color: var(--offwhite);
 }
 .kitchen-process h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
+  color: var(--navy);
 }
 .process-row {
   display: grid;
@@ -1386,6 +1389,7 @@ button:hover {
 .remodel-intro {
   padding: 4rem var(--gap) 1rem;
   text-align: center;
+  background-color: var(--offwhite);
 }
 .remodel-intro .lead {
   max-width: 700px;
@@ -1398,11 +1402,13 @@ button:hover {
   padding: 3rem var(--gap) 4rem;
   max-width: var(--max-width);
   margin: 0 auto;
+  background-color: var(--offwhite);
 }
 .design-paths h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--navy);
 }
 .design-paths > p {
   max-width: 700px;
@@ -1446,11 +1452,15 @@ button:hover {
   padding: 1rem var(--gap) 4rem;
   max-width: var(--max-width);
   margin: 0 auto;
+  background-color: var(--offwhite);
 }
 .remodel-process h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .remodel-gallery {
