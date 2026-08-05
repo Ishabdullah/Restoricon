@@ -1239,6 +1239,11 @@ button:hover {
   font-weight: 600;
   color: var(--bronze);
 }
+.service-card--photo {
+  background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.72) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/remodeling/remodel-magnifier.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 .page-hero {
   background-size: cover;
@@ -1372,5 +1377,110 @@ button:hover {
   }
   .page-hero h1 {
     font-size: 1.9rem;
+  }
+}
+
+/*====================================
+  Remodeling Sub-page
+====================================*/
+.remodel-intro {
+  padding: 4rem var(--gap) 1rem;
+  text-align: center;
+}
+.remodel-intro .lead {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--navy);
+  font-size: 1.15rem;
+}
+
+.design-paths {
+  padding: 3rem var(--gap) 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.design-paths h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.design-paths > p {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+.path-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.path-card {
+  background-color: var(--offwhite);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(10, 25, 47, 0.12);
+  border: 1px solid rgba(10, 25, 47, 0.08);
+}
+.path-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+.path-card-body {
+  padding: 1.5rem;
+}
+.path-card-body h3 {
+  color: var(--navy);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.path-card-body p {
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+.remodel-process {
+  padding: 1rem var(--gap) 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.remodel-process h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.remodel-gallery {
+  background-color: var(--charcoal);
+  padding: 4rem var(--gap);
+}
+.remodel-gallery h2 {
+  text-align: center;
+  color: var(--offwhite);
+  margin-bottom: 2rem;
+}
+
+.remodel-cta {
+  background-color: var(--navy);
+  color: var(--offwhite);
+  text-align: center;
+  padding: 4rem var(--gap);
+}
+.remodel-cta h2 {
+  margin-bottom: 0.75rem;
+}
+.remodel-cta p {
+  margin-bottom: 1.5rem;
+}
+.remodel-cta a:not(.cta-primary) {
+  color: var(--bronze);
+}
+
+@media (max-width: 768px) {
+  .path-grid {
+    grid-template-columns: 1fr;
   }
 }
