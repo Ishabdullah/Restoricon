@@ -1507,8 +1507,6 @@ button:hover {
   font-size: 2rem;
   margin-bottom: 3rem;
   color: var(--navy);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .remodel-gallery {
