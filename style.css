@@ -1291,11 +1291,26 @@ button:hover {
 .service-card--interior-photo {
   background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/interior-finishes/interior-card.jpg");
 }
+.service-card--preclaim-photo {
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.9) 0%, rgba(10, 25, 47, 0.8) 55%, rgba(10, 25, 47, 0.93) 100%), url("assets/images/pre-claim/preclaim-card.jpg");
+}
 .service-card--photo h3,
 .service-card--kitchen-photo h3,
-.service-card--interior-photo h3 {
+.service-card--interior-photo h3,
+.service-card--preclaim-photo h3 {
   color: #B8892A;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+.service-card--preclaim-photo .service-link-cta {
+  color: var(--bronze);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.service-card--preclaim-photo .service-link-cta:hover {
+  text-decoration: underline;
 }
 
 .page-hero {
@@ -1669,6 +1684,250 @@ button:hover {
 
 @media (max-width: 768px) {
   .transform-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*====================================
+  Pre-Claim Construction & Repair Estimate Sub-page
+====================================*/
+.preclaim-intro {
+  padding: 4rem var(--gap) 1rem;
+  text-align: center;
+  background-color: var(--offwhite);
+}
+.preclaim-intro .lead {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--navy);
+  font-size: 1.15rem;
+}
+
+.preclaim-inspect {
+  padding: 3rem var(--gap) 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--offwhite);
+}
+.preclaim-inspect h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: var(--navy);
+}
+.inspect-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.inspect-card {
+  background-color: var(--offwhite);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(10, 25, 47, 0.12);
+  border: 1px solid rgba(10, 25, 47, 0.08);
+}
+.inspect-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+.inspect-card-body {
+  padding: 1.5rem;
+}
+.inspect-card-body h3 {
+  color: var(--navy);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.inspect-card-body ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--charcoal);
+}
+.inspect-card-body li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.preclaim-reports {
+  background-color: var(--charcoal);
+  padding: 4rem var(--gap);
+}
+.preclaim-reports h2 {
+  text-align: center;
+  color: var(--offwhite);
+  margin-bottom: 0.75rem;
+}
+.preclaim-reports .section-lead {
+  text-align: center;
+  color: rgba(248, 250, 252, 0.75);
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.report-preview {
+  background-color: var(--offwhite);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.report-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 2px solid var(--bronze);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+.report-logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.report-header-text {
+  display: flex;
+  flex-direction: column;
+}
+.report-header-text strong {
+  color: var(--navy);
+  font-size: 1rem;
+}
+.report-header-text span {
+  color: var(--charcoal);
+  font-size: 0.85rem;
+}
+.report-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+.report-meta div {
+  color: var(--navy);
+}
+.report-meta span {
+  display: block;
+  color: var(--charcoal);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 0.15rem;
+}
+.report-body p {
+  color: var(--charcoal);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 0.5rem;
+}
+.report-body strong {
+  color: var(--navy);
+}
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.report-table th {
+  text-align: left;
+  color: var(--navy);
+  border-bottom: 1px solid rgba(10, 25, 47, 0.2);
+  padding: 0.4rem 0.5rem;
+}
+.report-table td {
+  color: var(--charcoal);
+  border-bottom: 1px solid rgba(10, 25, 47, 0.08);
+  padding: 0.4rem 0.5rem;
+}
+.report-sample-note {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: rgba(30, 41, 59, 0.6);
+  margin: 0;
+}
+
+.preclaim-process {
+  padding: 1rem var(--gap) 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--offwhite);
+}
+.preclaim-process h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--navy);
+}
+
+.preclaim-compliance {
+  padding: 3rem var(--gap) 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--offwhite);
+}
+.preclaim-compliance h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: var(--navy);
+}
+.preclaim-disclosure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.preclaim-disclosure {
+  background-color: var(--offwhite);
+  border: 1px solid rgba(10, 25, 47, 0.12);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.preclaim-disclosure h3 {
+  color: var(--navy);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+.preclaim-disclosure p {
+  color: var(--charcoal);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+.preclaim-disclosure strong {
+  color: var(--navy);
+}
+
+.preclaim-cta {
+  background-color: var(--navy);
+  color: var(--offwhite);
+  text-align: center;
+  padding: 4rem var(--gap);
+}
+.preclaim-cta h2 {
+  margin-bottom: 0.75rem;
+}
+.preclaim-cta p {
+  margin-bottom: 1.5rem;
+}
+.preclaim-cta a:not(.cta-primary) {
+  color: var(--bronze);
+}
+
+@media (max-width: 768px) {
+  .inspect-grid {
+    grid-template-columns: 1fr;
+  }
+  .report-meta {
     grid-template-columns: 1fr;
   }
 }
