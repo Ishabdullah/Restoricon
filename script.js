@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ==========================================
     // 4. FORM SUBMIT HANDLERS
     // ==========================================
-    const handleFormMailto = (formId, subjectPrefix) => {
+    const handleFormMailto = (formId, subjectPrefix, redirectUrl) => {
         const form = document.getElementById(formId);
         if (!form) return;
 
@@ -212,11 +212,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
             window.location.href = mailtoUrl;
 
-            alert("Opening your email client... Please review the pre-filled message and click Send!");
+            if (redirectUrl) {
+                // There's no backend to confirm a real send against, so this
+                // fires once the mail-client handoff has been triggered, not
+                // once the email is actually sent. mailto: is an OS-level
+                // handoff, not a page navigation, so the tab is still here
+                // and free to move on to the thank-you page.
+                setTimeout(() => {
+                    window.location.href = redirectUrl;
+                }, 900);
+            } else {
+                alert("Opening your email client... Please review the pre-filled message and click Send!");
+            }
         });
     };
 
-    handleFormMailto('contactForm', 'Website Contact Inquiry');
+    handleFormMailto('contactForm', 'Website Contact Inquiry', '/thank-you/');
     handleFormMailto('subcontractorForm', 'Subcontractor Application');
     handleFormMailto('preClaimForm', 'Free Pre-Claim Estimate Request');
 

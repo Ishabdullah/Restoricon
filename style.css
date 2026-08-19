@@ -2073,3 +2073,44 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/*====================================
+  Thank You Page
+====================================*/
+.thank-you-details {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem var(--gap);
+  text-align: center;
+}
+.thank-you-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.thank-you-step {
+  background: var(--offwhite);
+  border: 1px solid rgba(10, 25, 47, 0.1);
+  border-left: 4px solid var(--bronze);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+.thank-you-step h3 {
+  color: var(--navy);
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+.thank-you-step p {
+  margin: 0;
+  color: var(--charcoal);
+}
+.thank-you-contact {
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 640px) {
+  .thank-you-steps {
+    grid-template-columns: 1fr;
+  }
+}

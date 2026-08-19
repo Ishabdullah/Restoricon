@@ -367,6 +367,15 @@
       msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
       window.location.href = mailtoUrl;
+
+      // There's no backend to confirm a real send against, so this fires
+      // once the mail-client handoff has been triggered (not once the email
+      // is actually sent) — same caveat as the gas_form_submit_attempt event
+      // above. mailto: is an OS-level handoff, not a page navigation, so the
+      // tab is still here and free to move on to the thank-you page.
+      setTimeout(function () {
+        window.location.href = '/gas/thank-you/';
+      }, 900);
     });
   });
 </script>
