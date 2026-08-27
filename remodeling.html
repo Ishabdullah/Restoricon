@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.analytics.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; frame-src 'self';">
+  
   <title>Full Home Remodeling & Additions | Restoricon, LLC</title>
   <meta name="description" content="Full home remodeling and additions in Hartford County, CT. From a hand-drawn sketch on graph paper to full architect and engineer-stamped blueprints, Restoricon takes your vision from concept to code-compliant construction.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://restoricon.com/remodeling.html">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.min.css">
   <link rel="icon" href="assets/logos/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/logos/restoricon-logo-icon.png">
   <meta name="theme-color" content="#0A192F">
@@ -37,7 +39,7 @@
     "url": "https://restoricon.com/remodeling.html"
   }
   </script>
-  <script src="assets/analytics.js" defer></script>
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -46,15 +48,18 @@
   <header>
     <nav class="navbar">
       <div class="nav-container">
+        <!-- Desktop menu -->
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html#home">Home</a></li>
           <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#subcontractors">Subcontractors</a></li>
           <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#tech-advantage">Tech</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
 
+        <!-- Mobile hamburger toggle -->
         <button class="nav-toggle" aria-label="Open navigation" aria-controls="navMenu" aria-expanded="false">
           &#9776;
         </button>
@@ -162,7 +167,20 @@
   <footer>
     <p>&copy; <span id="year"></span> Restoricon, LLC. All rights reserved.</p>
     <p class="footer-links"><a href="index.html#homeowner-contract">Homeowner Contract Template</a></p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/company/restoricon-llc/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Visit our LinkedIn Page">
+        LinkedIn
+      </a>
+      <a href="https://www.facebook.com/share/17v2AbEDhF/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Visit our Facebook Page">
+        Facebook
+      </a>
+      <a href="https://www.tiktok.com/@restoricon?_r=1&_t=ZT-99EmZp4pjx8" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Visit our TikTok Profile">
+        TikTok
+      </a>
+    </div>
   </footer>
+
+
 
   <!-- RESTORICON AI Chat Widget -->
   <div class="chat-widget">
@@ -174,6 +192,6 @@
     </a>
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="script.min.js" defer></script>
 </body>
 </html>

@@ -2114,3 +2114,163 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--navy, #0A192F);
+    color: #fff;
+    padding: 15px 20px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+.cookie-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.cookie-content p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+.cookie-content a {
+    color: var(--bronze, #C5A059);
+    text-decoration: underline;
+}
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* ==========================================
+   ACCESSIBILITY: FOCUS & HIGH CONTRAST 
+   ========================================== */
+
+/* Ensure focus outline is visible in Windows High Contrast Mode */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+#preClaimForm .form-group input:focus,
+#preClaimForm .form-group select:focus,
+#preClaimForm .form-group textarea:focus {
+  outline: 2px solid transparent;
+}
+
+/* Global focus-visible for all interactive elements */
+:focus-visible {
+  outline: 2px solid var(--bronze, #C5A059);
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   ACCESSIBILITY: REDUCED MOTION 
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+@media print {
+  /* Save ink, use high contrast */
+  :root {
+    --navy: #ffffff;
+    --charcoal: #ffffff;
+    --offwhite: #000000;
+  }
+  
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Hide unnecessary elements for printing */
+  .navbar,
+  header,
+  footer,
+  .cta-stack,
+  .modal-overlay,
+  .cookie-banner,
+  .chat-widget,
+  .nav-toggle,
+  form,
+  button,
+  iframe,
+  .skip-link {
+    display: none !important;
+  }
+
+  /* Ensure content expands */
+  main, .content-section, section {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Show link destinations */
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}
+
+/* Social Buttons */
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  background-color: transparent;
+  color: var(--bronze);
+  border: 1px solid var(--bronze);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.social-btn:hover, .social-btn:focus-visible {
+  background-color: var(--bronze);
+  color: var(--navy);
+  text-decoration: none;
+}

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.analytics.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; frame-src 'self';">
+  
 <title>Thank You | Restoricon, LLC</title>
 <meta name="description" content="Thanks for requesting a consultation with Restoricon, LLC. We've received your request and will be in touch shortly.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +22,6 @@
 <meta property="og:image" content="https://restoricon.com/assets/logos/restoricon-logo-hero.png">
 <meta property="og:locale" content="en_US">
 
-<script src="../../assets/analytics.js" defer></script>
 
 <style>
   :root{
@@ -113,6 +114,7 @@
     .hero h1{font-size:2.4rem;}
   }
 </style>
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -157,8 +159,6 @@
   <p><a href="https://restoricon.com/">Visit the full Restoricon website &rarr;</a></p>
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script src="gas-ty-inline.js" defer></script>
 </body>
 </html>

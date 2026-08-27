@@ -1,0 +1,9 @@
+/* TEAM */
+  Developer: Restoricon Engineering Team
+  Site: https://restoricon.com
+
+/* SITE */
+  Last update: 2026-08-27
+  Standards: HTML5, CSS3, WCAG 2.1 AA
+  Components: Vanilla JS, Custom CSS
+  Software: Antigravity CLI 

@@ -2,3 +2,9 @@ User-agent: *
 Allow: /
 
 Sitemap: https://restoricon.com/sitemap.xml
+
+Sitemap: https://restoricon.com/sitemap.xml
+Crawl-delay: 10
+Disallow: /thank-you/
+Disallow: /gas/thank-you/
+Disallow: /assets/documents/extracted/
