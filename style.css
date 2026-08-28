@@ -2325,18 +2325,43 @@ button:hover {
   color: #2E7D32;
   font-weight: 700;
 }
-.package-features li.excluded {
-  color: #888;
-  text-decoration: line-through;
-}
-.package-features li.excluded::before {
-  content: "✕";
-  color: #C62828;
-}
-.package-card .cta-btn {
+.package-enroll-btn {
+  display: block;
   width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
   text-align: center;
+  background-color: var(--bronze);
+  color: var(--navy);
+  border: 1px solid var(--bronze);
+  border-radius: 6px;
+  text-decoration: none;
   margin-top: auto;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(10, 25, 47, 0.1);
+  min-height: 48px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.package-enroll-btn:hover,
+.package-enroll-btn:focus-visible {
+  background-color: #d8b467;
+  color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(10, 25, 47, 0.18);
+  text-decoration: none;
+}
+.package-card--featured .package-enroll-btn {
+  background-color: var(--navy);
+  color: var(--bronze);
+  border: 2px solid var(--bronze);
+}
+.package-card--featured .package-enroll-btn:hover,
+.package-card--featured .package-enroll-btn:focus-visible {
+  background-color: var(--bronze);
+  color: var(--navy);
 }
 
 /* Complexity Tiers Section */
