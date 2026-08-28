@@ -1278,7 +1278,8 @@ button:hover {
 }
 .service-card--photo,
 .service-card--kitchen-photo,
-.service-card--interior-photo {
+.service-card--interior-photo,
+.service-card--homecare-photo {
   background-size: cover;
   background-position: center;
 }
@@ -1291,6 +1292,9 @@ button:hover {
 .service-card--interior-photo {
   background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/interior-finishes/interior-card.jpg");
 }
+.service-card--homecare-photo {
+  background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/homecare/homecare-button.jpg");
+}
 .service-card--preclaim-photo {
   background-size: cover;
   background-position: center;
@@ -1299,6 +1303,7 @@ button:hover {
 .service-card--photo h3,
 .service-card--kitchen-photo h3,
 .service-card--interior-photo h3,
+.service-card--homecare-photo h3,
 .service-card--preclaim-photo h3 {
   color: #B8892A;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
@@ -2148,6 +2153,382 @@ button:hover {
 .cookie-buttons {
     display: flex;
     gap: 10px;
+}
+
+/* ==========================================
+   Home Care Packages Sub-page
+   ========================================== */
+.homecare-intro {
+  padding: 3.5rem var(--gap) 1.5rem;
+  text-align: center;
+  background-color: var(--offwhite);
+}
+.homecare-intro .lead {
+  max-width: 780px;
+  margin: 0 auto 1.5rem;
+  color: var(--navy);
+  font-size: 1.18rem;
+  line-height: 1.65;
+}
+.homecare-tagline-bar {
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  padding: 1.25rem 1.75rem;
+  background-color: var(--navy);
+  color: var(--offwhite);
+  border-radius: 8px;
+  border-left: 4px solid var(--bronze);
+  box-shadow: 0 6px 18px rgba(10, 25, 47, 0.12);
+  text-align: center;
+}
+.homecare-tagline-bar h3 {
+  color: var(--bronze);
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+.homecare-pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.homecare-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  color: var(--offwhite);
+}
+.homecare-pill strong {
+  color: var(--bronze);
+}
+
+.homecare-packages-section {
+  padding: 3.5rem var(--gap) 4.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.homecare-packages-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.homecare-packages-section .section-subtitle {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  color: var(--charcoal);
+  font-size: 1.05rem;
+}
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.package-card {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid rgba(10, 25, 47, 0.12);
+  box-shadow: 0 8px 24px rgba(10, 25, 47, 0.07);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(10, 25, 47, 0.14);
+}
+.package-card--featured {
+  border: 2px solid var(--bronze);
+  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.25);
+  background: linear-gradient(180deg, #ffffff 0%, #FAF8F5 100%);
+}
+.package-ribbon {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bronze);
+  color: var(--navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.package-header {
+  text-align: center;
+  border-bottom: 1px solid rgba(10, 25, 47, 0.08);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.package-title {
+  font-size: 1.35rem;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+.package-summary {
+  font-size: 0.88rem;
+  color: #555;
+  min-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.package-price-wrap {
+  margin-top: 0.75rem;
+}
+.package-price {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+.package-price-period {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+}
+.package-prepay {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--bronze);
+  margin-top: 0.2rem;
+}
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  flex-grow: 1;
+}
+.package-features li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--charcoal);
+}
+.package-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2E7D32;
+  font-weight: 700;
+}
+.package-features li.excluded {
+  color: #888;
+  text-decoration: line-through;
+}
+.package-features li.excluded::before {
+  content: "✕";
+  color: #C62828;
+}
+.package-card .cta-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Complexity Tiers Section */
+.homecare-tiers-section {
+  background-color: var(--offwhite);
+  padding: 3.5rem var(--gap);
+  border-top: 1px solid rgba(10, 25, 47, 0.08);
+  border-bottom: 1px solid rgba(10, 25, 47, 0.08);
+}
+.homecare-tiers-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+.homecare-tiers-section .section-lead {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+.tiers-table-wrap {
+  max-width: 850px;
+  margin: 0 auto 2rem;
+  overflow-x: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(10, 25, 47, 0.06);
+  border: 1px solid rgba(10, 25, 47, 0.1);
+}
+.tiers-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.tiers-table th, .tiers-table td {
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid rgba(10, 25, 47, 0.08);
+  font-size: 0.92rem;
+}
+.tiers-table th {
+  background-color: var(--navy);
+  color: var(--offwhite);
+  font-weight: 600;
+}
+.tiers-table tr:hover {
+  background-color: rgba(197, 160, 89, 0.06);
+}
+.assessment-credit-box {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #EEF4F8;
+  border-left: 4px solid var(--navy);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.92rem;
+  color: var(--navy);
+  line-height: 1.55;
+}
+
+/* Master Catalog Section */
+.homecare-catalog-section {
+  padding: 3.5rem var(--gap);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.homecare-catalog-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 2rem;
+}
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.catalog-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(10, 25, 47, 0.1);
+  box-shadow: 0 4px 14px rgba(10, 25, 47, 0.05);
+}
+.catalog-card h3 {
+  color: var(--navy);
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--bronze);
+}
+.catalog-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.catalog-card li {
+  padding: 0.35rem 0;
+  font-size: 0.88rem;
+  color: var(--charcoal);
+  border-bottom: 1px dashed rgba(10, 25, 47, 0.08);
+}
+.catalog-card li:last-child {
+  border-bottom: none;
+}
+
+/* PDF Download Box */
+.homecare-download-section {
+  background: linear-gradient(135deg, var(--navy) 0%, #152C4D 100%);
+  color: var(--offwhite);
+  padding: 3.5rem var(--gap);
+  text-align: center;
+}
+.download-card {
+  max-width: 780px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.download-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  fill: var(--bronze);
+}
+.download-card h2 {
+  color: var(--offwhite);
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.download-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 620px;
+  margin: 0 auto 1.75rem;
+}
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--bronze);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.btn-download:hover, .btn-download:focus-visible {
+  background-color: #d8b467;
+  transform: translateY(-2px);
+  color: var(--navy);
+  text-decoration: none;
+}
+.btn-download svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Boundaries & Disclosures */
+.homecare-boundaries {
+  padding: 3rem var(--gap);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.boundaries-box {
+  background-color: var(--offwhite);
+  border: 1px solid rgba(10, 25, 47, 0.12);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.boundaries-box h3 {
+  color: var(--navy);
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.boundaries-box p {
+  color: var(--charcoal);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+.boundaries-box p:last-child {
+  margin-bottom: 0;
 }
 
 /* ==========================================

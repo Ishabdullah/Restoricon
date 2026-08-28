@@ -11,9 +11,11 @@ The website is a single page (https://restoricon.com/) with in-page sections rea
 ## Pages
 
 - [Restoricon, LLC](https://restoricon.com/): Full site — services, about, FAQ, subcontractor recruitment, homeowner contract template, and contact form. Key sections: `#services`, `#about`, `#faq`, `#subcontractors`, `#homeowner-contract`, `#contact`.
+- [Home Care Packages](https://restoricon.com/home-care.html): Year-round preventive home maintenance and property care memberships ($179 Basic, $399 Plus, $599 Complete, $999+ Estate).
 
 ## Documents
 
+- [Home Care Program Manual & Operations Guide](https://restoricon.com/assets/documents/Restoricon_HomeCare_Combined_Manual.pdf): Comprehensive manual covering HomeCare scopes, checklists, pricing complexity tiers, and operational standards.
 - [Homeowner Home Improvement Contract Template](https://restoricon.com/assets/documents/Restoricon_Home_Improvement_Contract.docx): Standard residential contract template prepared in accordance with the Connecticut Home Improvement Act.
 - [Subcontractor Master Services Agreement Template](https://restoricon.com/assets/documents/Subcontractor_MSA.docx): Standard subcontractor onboarding agreement terms.
 
