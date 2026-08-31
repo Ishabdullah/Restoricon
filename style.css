@@ -164,6 +164,31 @@ a:hover {
 .nav-phone-link:hover {
   color: var(--bronze);
 }
+.nav-portal-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--bronze);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 4px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.nav-portal-btn:hover {
+  background: var(--bronze);
+  color: var(--navy);
+  border-color: var(--bronze);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.nav-portal-menu-link {
+  color: var(--bronze) !important;
+  font-weight: 600 !important;
+}
 
 /* CTA Buttons */
 .cta-btn,
