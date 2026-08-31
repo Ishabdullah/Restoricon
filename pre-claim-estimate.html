@@ -46,28 +46,123 @@
 
   <!-- Header / Navigation -->
   <header>
-    <nav class="navbar">
-      <div class="nav-container">
-        <!-- Desktop menu -->
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#subcontractors">Subcontractors</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#tech-advantage">Tech</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-
-        <!-- Mobile hamburger toggle -->
-        <button class="nav-toggle" aria-label="Open navigation" aria-controls="navMenu" aria-expanded="false">
-          &#9776;
+  <nav class="navbar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <div class="nav-brand-group">
+        <!-- Top-Left Universal Navigation Drawer Toggle -->
+        <button id="navToggleBtn" class="nav-drawer-toggle" aria-label="Open universal navigation menu" aria-controls="navDrawer" aria-expanded="false">
+          <svg class="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
 
+        <a href="index.html#home" class="nav-brand" aria-label="Restoricon Home">
+          <svg class="brand-logo-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span class="brand-name">RESTORICON</span>
+        </a>
+      </div>
+
+      <!-- Desktop menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#subcontractors">Subcontractors</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#tech-advantage">Tech</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:8603371820" class="nav-phone-link" aria-label="Call Restoricon direct">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span class="phone-text">(860) 337-1820</span>
+        </a>
         <a href="index.html#contact" class="cta-btn">Get an Estimate</a>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+
+  <!-- Slide-out Universal Navigation Drawer & Backdrop Overlay -->
+  <div id="navDrawerOverlay" class="drawer-overlay" aria-hidden="true"></div>
+  <aside id="navDrawer" class="nav-drawer" aria-label="Universal Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <svg class="brand-logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <div>
+          <div class="drawer-brand-title">RESTORICON</div>
+          <div class="drawer-brand-sub">Restore &bull; Rebuild &bull; Renew</div>
+        </div>
+      </div>
+      <button id="drawerCloseBtn" class="drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Universal Web Surfaces & Portals -->
+      <div class="drawer-section">
+        <div class="drawer-section-title">PORTALS & INTAKE</div>
+        <a href="https://quote.restoricon.com" class="drawer-surface-card highlight-quote" target="_blank" rel="noopener">
+          <div class="drawer-surface-icon">⚡</div>
+          <div class="drawer-surface-info">
+            <div class="drawer-surface-name">Quote & Emergency Intake</div>
+            <div class="drawer-surface-desc">Instant scope calculation & claim booking</div>
+          </div>
+          <span class="drawer-badge badge-gold">Instant</span>
+        </a>
+
+        <a href="https://portal.restoricon.com" class="drawer-surface-card" target="_blank" rel="noopener">
+          <div class="drawer-surface-icon">👤</div>
+          <div class="drawer-surface-info">
+            <div class="drawer-surface-name">Customer Portal</div>
+            <div class="drawer-surface-desc">Project tracker, e-sign & live updates</div>
+          </div>
+          <span class="drawer-badge badge-blue">Live Tracker</span>
+        </a>
+
+        <a href="https://admin.restoricon.com" class="drawer-surface-card" target="_blank" rel="noopener">
+          <div class="drawer-surface-icon">🛡️</div>
+          <div class="drawer-surface-info">
+            <div class="drawer-surface-name">Staff & Admin ERP</div>
+            <div class="drawer-surface-desc">Operations, dispatch, CRM & bookkeeping</div>
+          </div>
+          <span class="drawer-badge badge-slate">Staff</span>
+        </a>
+      </div>
+
+      <!-- Website Navigation -->
+      <div class="drawer-section">
+        <div class="drawer-section-title">WEBSITE NAVIGATION</div>
+        <ul class="drawer-nav-list">
+          <li><a href="index.html#home" class="drawer-link"><span class="drawer-link-icon">🏠</span> Home</a></li>
+          <li><a href="index.html#services" class="drawer-link"><span class="drawer-link-icon">🔨</span> Services</a></li>
+          <li><a href="index.html#subcontractors" class="drawer-link"><span class="drawer-link-icon">🤝</span> Subcontractors</a></li>
+          <li><a href="index.html#about" class="drawer-link"><span class="drawer-link-icon">ℹ️</span> About Us</a></li>
+          <li><a href="index.html#tech-advantage" class="drawer-link"><span class="drawer-link-icon">💻</span> Tech Advantage</a></li>
+          <li><a href="index.html#faq" class="drawer-link"><span class="drawer-link-icon">❓</span> FAQ</a></li>
+          <li><a href="index.html#contact" class="drawer-link"><span class="drawer-link-icon">✉️</span> Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="drawer-contact-line">
+        <strong>Direct Line:</strong> <a href="tel:8603371820">(860) 337-1820</a>
+      </div>
+      <div class="drawer-contact-line">
+        <strong>Licensure:</strong> CT HIC.0692750 &bull; Fully Insured
+      </div>
+      <div class="drawer-contact-line">
+        <strong>Email:</strong> <a href="mailto:contact@restoricon.com">contact@restoricon.com</a>
+      </div>
+    </div>
+  </aside>
+</header>
 
   <main id="main">
 
@@ -249,6 +344,7 @@
       </a>
     </div>
   </footer>
+
 
 
 
