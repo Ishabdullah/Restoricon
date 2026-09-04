@@ -532,6 +532,10 @@ a:hover {
   color: var(--bronze);
   font-weight: 600;
 }
+.financing-strip img#acornBanner {
+  max-width: 100%;
+  height: auto;
+}
 
 /*====================================
   Services Section
