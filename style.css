@@ -1593,7 +1593,8 @@ button:hover {
 .service-card--photo,
 .service-card--kitchen-photo,
 .service-card--interior-photo,
-.service-card--homecare-photo {
+.service-card--homecare-photo,
+.service-card--pathway {
   background-size: cover;
   background-position: center;
 }
@@ -1609,6 +1610,9 @@ button:hover {
 .service-card--homecare-photo {
   background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/homecare/homecare-button.jpg");
 }
+.service-card--pathway {
+  background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.82) 0%, rgba(10, 25, 47, 0.65) 50%, rgba(10, 25, 47, 0.88) 100%), url("assets/images/pathway/pathway-card.jpg");
+}
 .service-card--preclaim-photo {
   background-size: cover;
   background-position: center;
@@ -1618,7 +1622,8 @@ button:hover {
 .service-card--kitchen-photo h3,
 .service-card--interior-photo h3,
 .service-card--homecare-photo h3,
-.service-card--preclaim-photo h3 {
+.service-card--preclaim-photo h3,
+.service-card--pathway h3 {
   color: #B8892A;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
 }
@@ -1632,16 +1637,9 @@ button:hover {
   text-decoration: underline;
 }
 
-/* ── Restoricon Pathway service card ── */
+/* ── Restoricon Pathway service card extras ── */
 .service-card--pathway {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(160deg, rgba(10,25,47,0.82) 0%, rgba(10,25,47,0.65) 50%, rgba(10,25,47,0.88) 100%), url("assets/images/pathway/pathway-button.jpg");
   border-top: 2px solid var(--bronze);
-}
-.service-card--pathway h3 {
-  color: #B8892A;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.55);
 }
 .service-card--pathway .service-link-cta {
   color: var(--bronze);
@@ -1653,57 +1651,98 @@ button:hover {
 
 /* Flow section */
 .pathway-flow-section {
-  background-color: var(--charcoal);
-  padding: 4rem var(--gap);
+  background-color: var(--navy);
+  background-image: linear-gradient(135deg, rgba(10,25,47,1) 0%, rgba(20,45,80,1) 100%);
+  padding: 5rem var(--gap);
   text-align: center;
+  border-top: 1px solid rgba(212,175,55,0.2);
+  border-bottom: 1px solid rgba(212,175,55,0.2);
 }
 .pathway-flow-section h2 {
   color: var(--offwhite);
+  font-size: 2.2rem;
   margin-bottom: 0.75rem;
 }
 .pathway-flow-subtitle {
   max-width: 680px;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 3.5rem;
   color: rgba(255,255,255,0.72);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 .pathway-flow {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .pathway-step {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
-  background: rgba(212,175,55,0.08);
-  border: 1px solid rgba(212,175,55,0.3);
-  border-radius: 10px;
-  padding: 1.25rem 1.75rem;
-  min-width: 110px;
+  justify-content: center;
+  gap: 0.6rem;
+  background: rgba(212,175,55,0.07);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 0;
+  padding: 2.5rem 2rem;
+  min-width: 150px;
+  flex: 1;
+  position: relative;
+}
+.pathway-step:first-child {
+  border-radius: 12px 0 0 12px;
+}
+.pathway-step:last-child {
+  border-radius: 0 12px 12px 0;
 }
 .pathway-step-num {
-  font-size: 1.6rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 900;
   color: var(--bronze);
   line-height: 1;
+  font-family: Georgia, serif;
 }
 .pathway-step-label {
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--offwhite);
   text-transform: uppercase;
 }
 .pathway-arrow {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--bronze);
-  padding: 0 0.2rem;
+  padding: 0 0.5rem;
+  align-self: center;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .pathway-flow {
+    flex-direction: column;
+    max-width: 340px;
+  }
+  .pathway-step {
+    border-radius: 0 !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .pathway-step:first-child { border-radius: 12px 12px 0 0 !important; }
+  .pathway-step:last-child  { border-radius: 0 0 12px 12px !important; }
+  .pathway-step-num { font-size: 2rem; }
+  .pathway-step-label { font-size: 1rem; letter-spacing: 0.05em; }
+  .pathway-arrow {
+    transform: rotate(90deg);
+    font-size: 1.5rem;
+    padding: 0.25rem 0;
+  }
 }
 
 /* Process section overrides for pathway */
