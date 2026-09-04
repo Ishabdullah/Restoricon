@@ -508,6 +508,32 @@ a:hover {
 }
 
 /*====================================
+  Financing Strip
+====================================*/
+.financing-strip {
+  background-color: var(--charcoal);
+  color: var(--offwhite);
+  padding: 2.5rem var(--gap);
+  text-align: center;
+}
+.financing-strip h2 {
+  color: var(--bronze);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.financing-strip p {
+  max-width: 600px;
+  margin: 0 auto 0.5rem;
+}
+.financing-strip a {
+  color: var(--offwhite);
+}
+.financing-fallback-link a {
+  color: var(--bronze);
+  font-weight: 600;
+}
+
+/*====================================
   Services Section
 ====================================*/
 .services {
