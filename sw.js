@@ -1,4 +1,4 @@
-const CACHE_NAME = 'restoricon-v1';
+const CACHE_NAME = 'restoricon-v10';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -35,8 +35,24 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   // Only cache GET requests
   if (event.request.method !== 'GET') return;
-  
-  // Cache-first strategy for static assets
+
+  const url = new URL(event.request.url);
+
+  // Network-first for HTML pages — always get fresh content
+  if (event.request.destination === 'document' || url.pathname.endsWith('.html') || url.pathname === '/') {
+    event.respondWith(
+      fetch(event.request)
+        .then(networkResponse => {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseToCache));
+          return networkResponse;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // Cache-first for static assets (CSS, JS, images, fonts)
   event.respondWith(
     caches.match(event.request)
       .then(cachedResponse => {
@@ -44,15 +60,11 @@ self.addEventListener('fetch', event => {
           return cachedResponse;
         }
         return fetch(event.request).then(networkResponse => {
-          // Don't cache if not a valid response or not from our origin
           if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
             return networkResponse;
           }
           const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME)
-            .then(cache => {
-              cache.put(event.request, responseToCache);
-            });
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseToCache));
           return networkResponse;
         });
       })
