@@ -1636,7 +1636,7 @@ button:hover {
 .service-card--pathway {
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(160deg, rgba(10,25,47,0.92) 0%, rgba(20,40,70,0.82) 55%, rgba(10,25,47,0.95) 100%);
+  background-image: linear-gradient(160deg, rgba(10,25,47,0.82) 0%, rgba(10,25,47,0.65) 50%, rgba(10,25,47,0.88) 100%), url("assets/images/pathway/pathway-button.jpg");
   border-top: 2px solid var(--bronze);
 }
 .service-card--pathway h3 {
@@ -1650,36 +1650,23 @@ button:hover {
 }
 
 /* ── Pathway Page Styles ── */
-.pathway-hero {
-  background-image: linear-gradient(160deg, rgba(10,25,47,0.96) 0%, rgba(20,45,75,0.88) 60%, rgba(10,25,47,0.98) 100%);
-  border-bottom: 2px solid var(--bronze);
-}
 
-.pathway-intro {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 3.5rem var(--gap);
-}
-.pathway-intro-inner p {
-  line-height: 1.8;
-  margin-bottom: 1.2rem;
-  font-size: 1.05rem;
-  color: var(--offwhite);
-}
-.pathway-intro-inner .lead {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--offwhite);
-}
-
+/* Flow section */
 .pathway-flow-section {
-  background: rgba(255,255,255,0.03);
-  padding: 3rem var(--gap);
+  background-color: var(--charcoal);
+  padding: 4rem var(--gap);
   text-align: center;
 }
 .pathway-flow-section h2 {
-  margin-bottom: 2rem;
-  color: var(--bronze);
+  color: var(--offwhite);
+  margin-bottom: 0.75rem;
+}
+.pathway-flow-subtitle {
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.72);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 .pathway-flow {
   display: flex;
@@ -1687,130 +1674,125 @@ button:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 .pathway-step {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(212,175,55,0.25);
+  gap: 0.4rem;
+  background: rgba(212,175,55,0.08);
+  border: 1px solid rgba(212,175,55,0.3);
   border-radius: 10px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1.75rem;
   min-width: 110px;
 }
-.pathway-step-icon {
-  font-size: 2rem;
+.pathway-step-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--bronze);
+  line-height: 1;
 }
 .pathway-step-label {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--offwhite);
   text-transform: uppercase;
 }
 .pathway-arrow {
   font-size: 1.5rem;
   color: var(--bronze);
-  padding: 0 0.25rem;
+  padding: 0 0.2rem;
 }
 
-.pathway-pillars-section {
-  padding: 3.5rem var(--gap);
-  max-width: 1100px;
-  margin: 0 auto;
+/* Process section overrides for pathway */
+.pathway-process {
+  background-color: var(--offwhite);
+}
+.pathway-process h2 {
+  color: var(--navy);
+}
+.pathway-process-sub {
   text-align: center;
-}
-.pathway-pillars-section h2 {
-  margin-bottom: 0.75rem;
-}
-.pathway-pillars-section .section-subtitle {
   max-width: 640px;
-  margin: 0 auto 2.5rem;
-  color: rgba(255,255,255,0.7);
-}
-.pathway-pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-.pathway-pillar {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(212,175,55,0.2);
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  text-align: left;
-}
-.pathway-pillar-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-}
-.pathway-pillar h3 {
+  margin: -1.5rem auto 2.5rem;
+  color: var(--charcoal);
   font-size: 1rem;
-  color: var(--bronze);
-  margin-bottom: 0.5rem;
-}
-.pathway-pillar p {
-  font-size: 0.92rem;
-  color: rgba(255,255,255,0.75);
   line-height: 1.65;
-  margin: 0;
 }
 
+/* Gallery overrides for pathway */
+.pathway-gallery h2 {
+  color: var(--offwhite);
+}
+.pathway-gallery-sub {
+  text-align: center;
+  max-width: 640px;
+  margin: -1rem auto 2rem;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+.pathway-support-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+}
+.pathway-support-item {
+  background: rgba(212,175,55,0.12);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.88rem;
+  color: var(--offwhite);
+  font-weight: 500;
+}
+
+/* Quote callout */
 .pathway-goal-section {
-  padding: 3rem var(--gap);
+  background-color: var(--offwhite);
+  padding: 4rem var(--gap);
   text-align: center;
 }
 .pathway-goal-box {
   display: inline-block;
-  max-width: 700px;
-  background: rgba(212,175,55,0.08);
-  border: 1px solid rgba(212,175,55,0.35);
-  border-radius: 14px;
-  padding: 2.5rem 3rem;
+  max-width: 760px;
+  border-left: 4px solid var(--bronze);
+  padding: 1.5rem 2.5rem;
+  text-align: left;
 }
-.pathway-goal-box h2 {
-  color: var(--bronze);
-  margin-bottom: 1rem;
-}
-.pathway-goal-box p {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 0.75rem;
-  line-height: 1.7;
-}
-.pathway-goal-highlight {
-  font-size: 1.3rem !important;
-  font-weight: 700;
-  color: var(--offwhite) !important;
+.pathway-goal-quote {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
 }
 
-.pathway-future-section {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 3.5rem var(--gap);
+/* Future section */
+.pathway-future-wrap {
+  background-color: var(--offwhite);
+}
+.pathway-future-wrap h2 {
+  color: var(--navy);
+}
+.pathway-tagline-block {
   text-align: center;
+  margin: 3rem auto 1rem;
+  padding: 2.5rem var(--gap);
+  border-top: 1px solid rgba(10,25,47,0.12);
+  max-width: var(--max-width);
 }
-.pathway-future-section h2 {
-  margin-bottom: 1.25rem;
-  color: var(--bronze);
-}
-.pathway-future-section p {
-  font-size: 1.02rem;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.8;
-  margin-bottom: 1.1rem;
-}
-.pathway-tagline {
-  margin-top: 2.5rem;
-  border-top: 1px solid rgba(212,175,55,0.25);
-  padding-top: 2rem;
-}
-.pathway-tagline p {
-  font-size: 1.3rem !important;
-  color: var(--offwhite) !important;
-  margin-bottom: 0.4rem !important;
-  line-height: 1.5 !important;
+.pathway-tagline-block p {
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
 }
 
 @media (max-width: 600px) {
@@ -1821,7 +1803,13 @@ button:hover {
     transform: rotate(90deg);
   }
   .pathway-goal-box {
-    padding: 2rem 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .pathway-goal-quote {
+    font-size: 1.15rem;
+  }
+  .pathway-tagline-block p {
+    font-size: 1.2rem;
   }
 }
 
