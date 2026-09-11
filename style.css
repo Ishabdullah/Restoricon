@@ -1593,6 +1593,7 @@ button:hover {
 .service-card--photo,
 .service-card--kitchen-photo,
 .service-card--bathroom-photo,
+.service-card--exterior-photo,
 .service-card--interior-photo,
 .service-card--homecare-photo,
 .service-card--pathway {
@@ -1607,6 +1608,9 @@ button:hover {
 }
 .service-card--bathroom-photo {
   background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/bathrooms/bathroom-button.jpg");
+}
+.service-card--exterior-photo {
+  background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.82) 0%, rgba(10, 25, 47, 0.68) 55%, rgba(10, 25, 47, 0.9) 100%), url("assets/images/exterior-finishes/exterior-button.jpg");
 }
 .service-card--interior-photo {
   background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/interior-finishes/interior-card.jpg");
@@ -1625,6 +1629,7 @@ button:hover {
 .service-card--photo h3,
 .service-card--kitchen-photo h3,
 .service-card--bathroom-photo h3,
+.service-card--exterior-photo h3,
 .service-card--interior-photo h3,
 .service-card--homecare-photo h3,
 .service-card--preclaim-photo h3,
@@ -1979,6 +1984,91 @@ button:hover {
 .kitchen-cta a:not(.cta-primary) {
   color: var(--bronze);
 }
+
+/* ── Exterior Finishes Page Styles ── */
+
+.exterior-services-overview {
+  background-color: var(--navy);
+  padding: 4rem var(--gap);
+  border-top: 1px solid rgba(212,175,55,0.15);
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+}
+.exterior-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.exterior-overview-item {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.exterior-overview-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.exterior-overview-item h3 {
+  color: var(--bronze);
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+.exterior-overview-item p {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+.exterior-why-section {
+  background-color: var(--offwhite);
+  padding: 4rem var(--gap);
+}
+.exterior-why-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.exterior-why-inner h2 {
+  text-align: center;
+  color: var(--navy);
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+.exterior-why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.exterior-why-item {
+  border-left: 3px solid var(--bronze);
+  padding-left: 1.25rem;
+}
+.exterior-why-item h3 {
+  color: var(--navy);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.exterior-why-item p {
+  color: var(--charcoal);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+@media (max-width: 768px) {
+  .exterior-overview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .exterior-why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .exterior-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 @media (max-width: 768px) {
   .process-row {
