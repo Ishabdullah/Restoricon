@@ -1592,6 +1592,7 @@ button:hover {
 }
 .service-card--photo,
 .service-card--kitchen-photo,
+.service-card--bathroom-photo,
 .service-card--interior-photo,
 .service-card--homecare-photo,
 .service-card--pathway {
@@ -1603,6 +1604,9 @@ button:hover {
 }
 .service-card--kitchen-photo {
   background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/kitchens/kitchen-button.jpg");
+}
+.service-card--bathroom-photo {
+  background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/bathrooms/bathroom-button.jpg");
 }
 .service-card--interior-photo {
   background-image: linear-gradient(160deg, rgba(10, 25, 47, 0.88) 0%, rgba(10, 25, 47, 0.76) 55%, rgba(10, 25, 47, 0.92) 100%), url("assets/images/interior-finishes/interior-card.jpg");
@@ -1620,6 +1624,7 @@ button:hover {
 }
 .service-card--photo h3,
 .service-card--kitchen-photo h3,
+.service-card--bathroom-photo h3,
 .service-card--interior-photo h3,
 .service-card--homecare-photo h3,
 .service-card--preclaim-photo h3,
