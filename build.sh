@@ -1,6 +1,19 @@
 #!/usr/bin/env bash
 echo "Minifying CSS..."
-sed -e 's/\/\*.*\*\///g' -e 's/^[ \t]*//g' -e 's/[ \t]*$//g' style.css | tr -d '\n' > style.min.css
+python3 -c "
+import re, sys
+css = open('style.css').read()
+# Remove /* ... */ comments (including multi-line) non-greedily
+css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)
+# Strip leading/trailing whitespace from each line
+lines = [l.strip() for l in css.splitlines()]
+# Join into one line, collapsing runs of whitespace
+css = ' '.join(l for l in lines if l)
+css = re.sub(r'\s*([{};:,>~+])\s*', r'\1', css)
+css = re.sub(r'\s+', ' ', css).strip()
+open('style.min.css', 'w').write(css)
+print('style.min.css written:', len(css), 'bytes')
+"
 
 echo "Basic JS minification (removing comments)..."
 sed -e 's/\/\/.*//g' script.js > script.min.js
