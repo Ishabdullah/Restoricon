@@ -117,6 +117,7 @@ a:hover {
   gap: 0.6rem;
   text-decoration: none;
   color: var(--offwhite);
+  white-space: nowrap;
 }
 .nav-brand .brand-name {
   font-weight: 800;
@@ -142,6 +143,7 @@ a:hover {
   font-size: 0.95rem;
   padding: 0.5rem 0.5rem;
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.2s ease;
 }
 .nav-menu li a:hover {
@@ -151,6 +153,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
+  white-space: nowrap;
 }
 .nav-phone-link {
   color: #E2E8F0;
