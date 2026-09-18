@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.analytics.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com; font-src 'self'; frame-src 'self';">
   
-  <title>Home Care Packages & Preventive Maintenance | Restoricon, LLC</title>
-  <meta name="description" content="Year-round residential home care and property maintenance memberships in Hartford County, CT. Preventive maintenance, seasonal assessments, gutter cleaning, lawn care, and priority emergency response.">
+  <title>Home Care Packages &amp; Preventive Maintenance | Restoricon, LLC</title>
+  <meta name="description" content="Year-round residential home care and property maintenance memberships in Hartford County, CT. Preventive maintenance, seasonal assessments, gutter cleaning, lawn care, pool services, house cleaning, car detailing, and priority emergency response.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://restoricon.com/home-care.html">
@@ -17,7 +17,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Restoricon, LLC">
-  <meta property="og:title" content="Home Care Packages & Preventive Maintenance | Restoricon, LLC">
+  <meta property="og:title" content="Home Care Packages &amp; Preventive Maintenance | Restoricon, LLC">
   <meta property="og:description" content="One Company. Your Entire Property. All Year. Proactive residential maintenance and property care memberships across Hartford County, CT.">
   <meta property="og:url" content="https://restoricon.com/home-care.html">
   <meta property="og:image" content="https://restoricon.com/assets/images/homecare/homecare-hero.jpg">
@@ -25,7 +25,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Home Care Packages & Preventive Maintenance | Restoricon, LLC">
+  <meta name="twitter:title" content="Home Care Packages &amp; Preventive Maintenance | Restoricon, LLC">
   <meta name="twitter:description" content="Proactive residential maintenance and property care memberships across Hartford County, CT.">
   <meta name="twitter:image" content="https://restoricon.com/assets/images/homecare/homecare-hero.jpg">
 
@@ -51,7 +51,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "HomeCare Basic",
-            "description": "Preventive home maintenance membership including seasonal property assessments, gutter cleaning, dryer vent cleaning, and plumbing checks."
+            "description": "Preventive home maintenance membership including 1 seasonal property assessment, gutter cleaning, dryer vent cleaning, sump pump check, HVAC drain check, hose-bib winterization, and plumbing checks. No lawn mowing."
           },
           "price": "179",
           "priceCurrency": "USD"
@@ -61,7 +61,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "HomeCare Plus",
-            "description": "Preventive home maintenance combined with scheduled lawn and grounds maintenance."
+            "description": "Everything in Basic plus bi-weekly lawn mowing, string trimming, edging, spring/fall cleanups, 1 handyman credit, and 2 seasonal property assessments."
           },
           "price": "399",
           "priceCurrency": "USD"
@@ -71,7 +71,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "HomeCare Complete",
-            "description": "Full-property maintenance including soft washing, driveway pressure washing, and extended seasonal cleanups."
+            "description": "Full-property maintenance including weekly mowing, whole-house soft wash, driveway pressure washing, 2 snow removal visits, driveway sealing credit, and 2 handyman credits."
           },
           "price": "599",
           "priceCurrency": "USD"
@@ -81,7 +81,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "HomeCare Estate",
-            "description": "White-glove customized property management for large or complex properties."
+            "description": "White-glove customized property management with dedicated handyman hours, vacation-home checks, post-storm evaluations, and named account contact."
           },
           "price": "999",
           "priceCurrency": "USD"
@@ -91,6 +91,389 @@
   }
   </script>
   <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    /* ===== HomeCare Page Enhancements ===== */
+
+    /* Stat bar */
+    .hc-stat-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      background: var(--navy, #0A192F);
+      border-bottom: 2px solid rgba(212,175,55,0.25);
+    }
+    .hc-stat-item {
+      flex: 1 1 160px;
+      text-align: center;
+      padding: 1.4rem 1rem;
+      border-right: 1px solid rgba(255,255,255,0.07);
+    }
+    .hc-stat-item:last-child { border-right: none; }
+    .hc-stat-num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #D4AF37;
+      letter-spacing: -0.02em;
+    }
+    .hc-stat-label {
+      display: block;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.2rem;
+    }
+
+    /* Value proposition cards */
+    .hc-why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.4rem;
+      margin-top: 2rem;
+    }
+    .hc-why-card {
+      background: #fff;
+      border: 1px solid rgba(10,25,47,0.08);
+      border-radius: 12px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 2px 12px rgba(10,25,47,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hc-why-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(10,25,47,0.12);
+    }
+    .hc-why-icon {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .hc-why-card h4 {
+      color: var(--navy, #0A192F);
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+    .hc-why-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Service level standards table */
+    .sls-section {
+      padding: 3.5rem 1.5rem;
+      background: var(--navy, #0A192F);
+      color: #fff;
+    }
+    .sls-section h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 1.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .sls-section .section-subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+    }
+    .sls-table-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .sls-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .sls-table th {
+      background: rgba(212,175,55,0.15);
+      color: #D4AF37;
+      padding: 0.9rem 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .sls-table th:first-child { text-align: left; }
+    .sls-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+      color: rgba(255,255,255,0.85);
+      vertical-align: middle;
+    }
+    .sls-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+      color: #fff;
+    }
+    .sls-table tbody tr:last-child td { border-bottom: none; }
+    .sls-table tbody tr:hover td { background: rgba(255,255,255,0.04); }
+    .sls-badge-yes {
+      background: rgba(34,197,94,0.2);
+      color: #4ade80;
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .sls-badge-no {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.85rem;
+    }
+
+    /* Add-on services section */
+    .addons-section {
+      padding: 3.5rem 1.5rem;
+      background: #f8f9fc;
+    }
+    .addons-section h2 {
+      text-align: center;
+      color: var(--navy, #0A192F);
+      font-size: 1.9rem;
+      margin-bottom: 0.4rem;
+    }
+    .addons-section .section-subtitle {
+      text-align: center;
+      color: #555;
+      font-size: 0.95rem;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .addon-card {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid rgba(10,25,47,0.08);
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(10,25,47,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .addon-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(10,25,47,0.12);
+    }
+    .addon-card-header {
+      background: var(--navy, #0A192F);
+      color: #fff;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .addon-card-icon { font-size: 1.6rem; }
+    .addon-card-header h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #D4AF37;
+    }
+    .addon-card-header p {
+      margin: 0.15rem 0 0;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .addon-card-body {
+      padding: 1.4rem;
+    }
+    .addon-services-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.2rem;
+    }
+    .addon-services-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(10,25,47,0.06);
+      font-size: 0.88rem;
+    }
+    .addon-services-list li:last-child { border-bottom: none; }
+    .addon-service-name { color: #333; flex: 1; }
+    .addon-service-price {
+      color: var(--navy, #0A192F);
+      font-weight: 700;
+      font-size: 0.83rem;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
+    .addon-note {
+      font-size: 0.8rem;
+      color: #888;
+      font-style: italic;
+      margin-top: 0.2rem;
+      line-height: 1.45;
+    }
+
+    /* A la carte section */
+    .alacarte-section {
+      padding: 3.5rem 1.5rem;
+      background: #fff;
+    }
+    .alacarte-section h2 {
+      text-align: center;
+      color: var(--navy, #0A192F);
+      font-size: 1.9rem;
+      margin-bottom: 0.4rem;
+    }
+    .alacarte-section .section-subtitle {
+      text-align: center;
+      color: #555;
+      font-size: 0.95rem;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+    .alacarte-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .alacarte-card {
+      background: #f8f9fc;
+      border-radius: 12px;
+      border: 1px solid rgba(10,25,47,0.08);
+      padding: 1.4rem;
+    }
+    .alacarte-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy, #0A192F);
+      margin: 0 0 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid rgba(212,175,55,0.4);
+    }
+    .alacarte-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .alacarte-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(10,25,47,0.05);
+      font-size: 0.87rem;
+    }
+    .alacarte-list li:last-child { border-bottom: none; }
+    .alacarte-service { color: #444; flex: 1; }
+    .alacarte-price {
+      color: #C5A059;
+      font-weight: 700;
+      font-size: 0.83rem;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
+
+    /* Seasonal calendar */
+    .hc-calendar-section {
+      padding: 3.5rem 1.5rem;
+      background: #f0f3f8;
+    }
+    .hc-calendar-section h2 {
+      text-align: center;
+      color: var(--navy, #0A192F);
+      font-size: 1.9rem;
+      margin-bottom: 0.4rem;
+    }
+    .hc-calendar-section .section-subtitle {
+      text-align: center;
+      color: #555;
+      font-size: 0.95rem;
+      max-width: 680px;
+      margin: 0 auto 2rem;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .calendar-card {
+      background: #fff;
+      border-radius: 12px;
+      border-top: 4px solid var(--gold, #D4AF37);
+      padding: 1.4rem;
+      box-shadow: 0 2px 10px rgba(10,25,47,0.06);
+    }
+    .calendar-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy, #0A192F);
+      margin: 0 0 0.4rem;
+    }
+    .calendar-month {
+      font-size: 0.78rem;
+      color: #D4AF37;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.8rem;
+    }
+    .calendar-tasks {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .calendar-tasks li {
+      font-size: 0.85rem;
+      color: #555;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid rgba(10,25,47,0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+    .calendar-tasks li:last-child { border-bottom: none; }
+    .calendar-tasks li::before {
+      content: "✓";
+      color: #D4AF37;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    /* Scope notice */
+    .hc-scope-notice {
+      background: rgba(212,175,55,0.08);
+      border-left: 4px solid #D4AF37;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.55;
+    }
+    .hc-scope-notice strong { color: var(--navy, #0A192F); }
+
+    /* Responsive tweaks */
+    @media (max-width: 640px) {
+      .hc-stat-item { flex-basis: 45%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .sls-table { font-size: 0.78rem; }
+      .sls-table th, .sls-table td { padding: 0.65rem 0.5rem; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -135,7 +518,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           <span class="phone-text">(860) 337-1820</span>
         </a>
-        <a href="https://admin.restoricon.com" class="nav-portal-btn" target="_blank" rel="noopener" aria-label="Staff & Admin Portal Login">
+        <a href="https://admin.restoricon.com" class="nav-portal-btn" target="_blank" rel="noopener" aria-label="Staff &amp; Admin Portal Login">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           <span>Staff Login</span>
         </a>
@@ -163,12 +546,12 @@
     <div class="drawer-body">
       <!-- Universal Web Surfaces & Portals -->
       <div class="drawer-section">
-        <div class="drawer-section-title">PORTALS & INTAKE</div>
+        <div class="drawer-section-title">PORTALS &amp; INTAKE</div>
         <a href="https://quote.restoricon.com" class="drawer-surface-card highlight-quote" target="_blank" rel="noopener">
           <div class="drawer-surface-icon">⚡</div>
           <div class="drawer-surface-info">
-            <div class="drawer-surface-name">Quote & Emergency Intake</div>
-            <div class="drawer-surface-desc">Instant scope calculation & claim booking</div>
+            <div class="drawer-surface-name">Quote &amp; Emergency Intake</div>
+            <div class="drawer-surface-desc">Instant scope calculation &amp; claim booking</div>
           </div>
           <span class="drawer-badge badge-gold">Instant</span>
         </a>
@@ -177,7 +560,7 @@
           <div class="drawer-surface-icon">👤</div>
           <div class="drawer-surface-info">
             <div class="drawer-surface-name">Customer Portal</div>
-            <div class="drawer-surface-desc">Project tracker, e-sign & live updates</div>
+            <div class="drawer-surface-desc">Project tracker, e-sign &amp; live updates</div>
           </div>
           <span class="drawer-badge badge-blue">Live Tracker</span>
         </a>
@@ -185,8 +568,8 @@
         <a href="https://admin.restoricon.com" class="drawer-surface-card" target="_blank" rel="noopener">
           <div class="drawer-surface-icon">🛡️</div>
           <div class="drawer-surface-info">
-            <div class="drawer-surface-name">Staff & Admin ERP</div>
-            <div class="drawer-surface-desc">Operations, dispatch, CRM & bookkeeping</div>
+            <div class="drawer-surface-name">Staff &amp; Admin ERP</div>
+            <div class="drawer-surface-desc">Operations, dispatch, CRM &amp; bookkeeping</div>
           </div>
           <span class="drawer-badge badge-slate">Staff</span>
         </a>
@@ -225,16 +608,40 @@
   <main id="main">
 
     <!-- Page Hero -->
-    <section class="page-hero" style="background-image: linear-gradient(180deg, rgba(10,25,47,0.78) 0%, rgba(10,25,47,0.58) 45%, rgba(10,25,47,0.92) 100%), url('assets/images/homecare/homecare-hero.jpg');">
+    <section class="page-hero" style="background-image: linear-gradient(180deg, rgba(10,25,47,0.82) 0%, rgba(10,25,47,0.60) 45%, rgba(10,25,47,0.94) 100%), url('assets/images/homecare/homecare-hero.jpg');">
       <p class="page-hero-eyebrow"><a href="index.html#services">&larr; All Services</a></p>
       <h1>Home Care Packages</h1>
       <p class="subhead">One Company. Your Entire Property. All Year.</p>
       <a href="index.html#contact" class="cta-primary">Request a Property Assessment</a>
     </section>
 
+    <!-- Stat Bar -->
+    <div class="hc-stat-bar" role="region" aria-label="HomeCare Program Highlights">
+      <div class="hc-stat-item">
+        <span class="hc-stat-num">4</span>
+        <span class="hc-stat-label">Membership Tiers</span>
+      </div>
+      <div class="hc-stat-item">
+        <span class="hc-stat-num">$179</span>
+        <span class="hc-stat-label">Starting / Month</span>
+      </div>
+      <div class="hc-stat-item">
+        <span class="hc-stat-num">38+</span>
+        <span class="hc-stat-label">Annual Visits (Complete)</span>
+      </div>
+      <div class="hc-stat-item">
+        <span class="hc-stat-num">24 hr</span>
+        <span class="hc-stat-label">Emergency Response (Basic)</span>
+      </div>
+      <div class="hc-stat-item">
+        <span class="hc-stat-num">100%</span>
+        <span class="hc-stat-label">Assessment Fee Credited</span>
+      </div>
+    </div>
+
     <!-- Intro -->
     <section class="homecare-intro">
-      <p class="lead">The simple idea behind <strong>Restoricon HomeCare</strong>: We help you stay ahead of routine maintenance instead of waiting for small, unaddressed issues to become expensive repairs. From gutter cleanings and HVAC drain checks to seasonal lawn care and house washing, your entire property is protected by a single, accountable builder.</p>
+      <p class="lead">The simple idea behind <strong>Restoricon HomeCare</strong>: We help you stay ahead of routine maintenance instead of waiting for small, unaddressed issues to become expensive repairs. From gutter cleanings and HVAC drain checks to seasonal lawn care and whole-house washing, your entire property is protected by a single, accountable licensed CT general contractor — backed by a digital Home Health Report after every visit.</p>
       
       <div class="homecare-tagline-bar">
         <h3>Four Simple Levels of Property Care</h3>
@@ -242,7 +649,43 @@
           <div class="homecare-pill"><strong>$179 Basic:</strong> Take care of my home</div>
           <div class="homecare-pill"><strong>$399 Plus:</strong> Take care of my home + lawn</div>
           <div class="homecare-pill"><strong>$599 Complete:</strong> Take care of my whole property</div>
-          <div class="homecare-pill"><strong>$999+ Estate:</strong> Manage it for me</div>
+          <div class="homecare-pill"><strong>$999+ Estate:</strong> Manage it all for me</div>
+        </div>
+      </div>
+
+      <!-- Why HomeCare -->
+      <h3 style="text-align:center; color:var(--navy); font-size:1.4rem; margin: 2.5rem 0 0.3rem;">Why Homeowners Choose a Restoricon Membership</h3>
+      <p style="text-align:center; color:#555; font-size:0.92rem; max-width:680px; margin:0 auto 0.5rem;">Preventive maintenance isn't just about convenience — it protects your largest investment.</p>
+      <div class="hc-why-grid">
+        <div class="hc-why-card">
+          <span class="hc-why-icon">🏠</span>
+          <h4>One Point of Contact</h4>
+          <p>A single licensed builder manages your gutters, lawn, plumbing checks, washing, and emergency response — no vendor juggling.</p>
+        </div>
+        <div class="hc-why-card">
+          <span class="hc-why-icon">📋</span>
+          <h4>Digital Home Health Reports</h4>
+          <p>After every seasonal assessment, receive a color-coded report (Green / Yellow / Orange / Red) with timestamped photos and clear action items.</p>
+        </div>
+        <div class="hc-why-card">
+          <span class="hc-why-icon">⚡</span>
+          <h4>Priority Emergency Response</h4>
+          <p>Members jump the queue. Active leaks, storm damage, and freeze emergencies receive priority response — as fast as 4 hours for Estate members.</p>
+        </div>
+        <div class="hc-why-card">
+          <span class="hc-why-icon">💰</span>
+          <h4>Transparent, Flat Pricing</h4>
+          <p>No surprise invoices. Membership covers defined, predictable labor. Materials and out-of-scope repairs are quoted separately with your prior approval.</p>
+        </div>
+        <div class="hc-why-card">
+          <span class="hc-why-icon">🔧</span>
+          <h4>Licensed CT General Contractor</h4>
+          <p>CT HIC.0706905. Fully insured. Unlike handyman apps, we can pull permits, manage subcontractors, and handle full restoration work.</p>
+        </div>
+        <div class="hc-why-card">
+          <span class="hc-why-icon">📅</span>
+          <h4>Annualized, Predictable Billing</h4>
+          <p>Pay the same flat fee every month — no large spring/summer spikes. Annual prepay members receive the equivalent of one month free.</p>
         </div>
       </div>
     </section>
@@ -250,33 +693,35 @@
     <!-- Packages Section -->
     <section class="homecare-packages-section">
       <h2>Membership Packages &amp; Pricing</h2>
-      <p class="section-subtitle">Transparent starting prices for Tier A properties (up to ¼ acre). Final pricing is confirmed after your initial on-site property baseline assessment.</p>
+      <p class="section-subtitle">Transparent starting prices for Tier A properties (up to ¼ acre). Final pricing is confirmed after your initial on-site property baseline assessment. Annual prepay saves you one full month.</p>
 
       <div class="packages-grid">
         <!-- Basic Card -->
         <div class="package-card">
           <div class="package-header">
             <h3 class="package-title">HomeCare Basic</h3>
-            <p class="package-summary">Preventive interior &amp; exterior home maintenance</p>
+            <p class="package-summary">Preventive interior &amp; exterior home maintenance — no lawn mowing</p>
             <div class="package-price-wrap">
               <span class="package-price">$179</span>
               <span class="package-price-period">/ month</span>
-              <div class="package-prepay">$1,899 Annual Prepay (Save $249)</div>
+              <div class="package-prepay">$1,969 Annual Prepay — 1 Month Free</div>
             </div>
           </div>
           <ul class="package-features">
-            <li><strong>2 Seasonal property assessments</strong> per year</li>
-            <li><strong>2 Gutter cleanings</strong> &amp; downspout clearing</li>
-            <li><strong>1 Annual dryer-vent cleaning</strong></li>
-            <li>Downspout &amp; visible drainage check</li>
-            <li>Sump-pump visual &amp; operational check</li>
-            <li>Hose-bib &amp; exterior line winterization</li>
-            <li>HVAC condensate drain-line check</li>
-            <li>Water-heater area &amp; plumbing leak review</li>
-            <li>Window &amp; exterior door seal check</li>
-            <li>Moisture &amp; visible water-intrusion inspection</li>
-            <li>Home Health Report with photos</li>
-            <li>Priority scheduling &amp; restoration response</li>
+            <li><strong>1 Seasonal property assessment</strong> per year (Spring or Fall)</li>
+            <li><strong>1 Gutter cleaning</strong> &amp; downspout clearing (Spring)</li>
+            <li><strong>1 Annual dryer-vent cleaning</strong> &amp; lint removal</li>
+            <li>Hose-bib winterization &amp; exterior water-line freeze check</li>
+            <li>Sump-pump operational &amp; visual check</li>
+            <li>HVAC condensate / drain-line visual flow check</li>
+            <li>Water-heater area &amp; visible plumbing leak review</li>
+            <li>Window &amp; exterior door seal assessment</li>
+            <li>Moisture &amp; visible water-intrusion assessment</li>
+            <li>Exterior envelope, roofline &amp; foundation visual review</li>
+            <li>Basement / crawlspace / attic moisture review</li>
+            <li>Smoke &amp; CO detector visual test</li>
+            <li>Home Health Report with timestamped photos</li>
+            <li>Priority repair scheduling &amp; builder restoration response</li>
           </ul>
           <a href="index.html#contact" class="package-enroll-btn">Enroll in Basic</a>
         </div>
@@ -286,26 +731,26 @@
           <div class="package-ribbon">Most Popular</div>
           <div class="package-header">
             <h3 class="package-title">HomeCare Plus</h3>
-            <p class="package-summary">Preventive home care + recurring lawn &amp; grounds</p>
+            <p class="package-summary">Preventive home care + bi-weekly lawn &amp; grounds maintenance</p>
             <div class="package-price-wrap">
               <span class="package-price">$399</span>
               <span class="package-price-period">/ month</span>
-              <div class="package-prepay">$4,299 Annual Prepay (Save $489)</div>
+              <div class="package-prepay">$4,389 Annual Prepay — 1 Month Free</div>
             </div>
           </div>
           <ul class="package-features">
             <li><strong>Everything in HomeCare Basic</strong></li>
-            <li><strong>Lawn &amp; grounds maintenance included</strong></li>
-            <li><strong>Scheduled lawn mowing</strong> in growing season</li>
-            <li>String trimming &amp; weed whacking</li>
-            <li>Walkway, driveway &amp; bed edging</li>
-            <li>Driveway &amp; walkway blow-off</li>
-            <li>Spring yard cleanup &amp; debris removal</li>
-            <li>Fall leaf removal (seasonal cleanup)</li>
-            <li><strong>4 Seasonal property assessments</strong> per year</li>
-            <li>Minor paint touch-up &amp; caulking/sealing allowance</li>
-            <li>Home Health Report with every visit</li>
-            <li>Priority scheduling &amp; emergency response</li>
+            <li><strong>Bi-weekly mowing</strong> of designated turf (growing season)</li>
+            <li>String trimming &amp; weed whacking around obstacles, beds &amp; fences</li>
+            <li>Precision edging of walks, driveways &amp; landscape beds</li>
+            <li>Hard-surface blow-off of driveways, patios &amp; walkways</li>
+            <li>Spring yard cleanup &amp; seasonal debris clearing</li>
+            <li>Fall leaf removal &amp; seasonal grounds cleanup (up to 2 visits)</li>
+            <li><strong>2 Seasonal property assessments</strong> per year</li>
+            <li>Service Visit Record after every routine visit</li>
+            <li>Home Health Reports after each Seasonal Assessment</li>
+            <li><strong>1 Handyman Pro Service Credit</strong> (1 hour on-site labor)</li>
+            <li>Priority scheduling &amp; VIP builder restoration response</li>
           </ul>
           <a href="index.html#contact" class="package-enroll-btn">Enroll in Plus</a>
         </div>
@@ -314,23 +759,24 @@
         <div class="package-card">
           <div class="package-header">
             <h3 class="package-title">HomeCare Complete</h3>
-            <p class="package-summary">Full-property care, house washing &amp; power washing</p>
+            <p class="package-summary">Full-property care, house washing, power washing &amp; snow removal</p>
             <div class="package-price-wrap">
               <span class="package-price">$599</span>
               <span class="package-price-period">/ month</span>
-              <div class="package-prepay">$6,499 Annual Prepay (Save $689)</div>
+              <div class="package-prepay">$6,589 Annual Prepay — 1 Month Free</div>
             </div>
           </div>
           <ul class="package-features">
             <li><strong>Everything in HomeCare Plus</strong></li>
-            <li><strong>Annual whole-house soft wash</strong></li>
-            <li><strong>Annual driveway pressure wash</strong></li>
-            <li>Expanded spring cleanup &amp; fall leaf removal</li>
-            <li>Expanded paint &amp; weather-sealing allowances</li>
-            <li>Additional included minor maintenance labor</li>
-            <li>Driveway sealing credit/allowance on approved cycle</li>
-            <li>Seasonal maintenance planning &amp; post-storm check</li>
-            <li>VIP scheduling &amp; emergency restoration response</li>
+            <li><strong>Weekly mowing</strong> (upgraded from bi-weekly) — up to 28 visits/season</li>
+            <li><strong>Annual whole-house soft wash</strong> (main home)</li>
+            <li><strong>Annual driveway pressure washing</strong></li>
+            <li><strong>1 Driveway sealing credit</strong> (1 hour labor)</li>
+            <li><strong>2 Snow removal visits</strong> (qualifying events: 1″+ snowfall)</li>
+            <li><strong>2 Seasonal property assessments</strong> per year</li>
+            <li><strong>2 Handyman Pro Service Credits</strong> (2 hours on-site labor)</li>
+            <li>VIP priority scheduling &amp; emergency restoration response</li>
+            <li>Response acknowledgment within 4 business hours</li>
           </ul>
           <a href="index.html#contact" class="package-enroll-btn">Enroll in Complete</a>
         </div>
@@ -339,32 +785,39 @@
         <div class="package-card">
           <div class="package-header">
             <h3 class="package-title">HomeCare Estate</h3>
-            <p class="package-summary">White-glove custom property management</p>
+            <p class="package-summary">White-glove custom property management &amp; dedicated builder oversight</p>
             <div class="package-price-wrap">
               <span class="package-price">$999+</span>
               <span class="package-price-period">/ month</span>
-              <div class="package-prepay">$10,999+ Annual Prepay</div>
+              <div class="package-prepay">Customized Annual Plan — Contact for Quote</div>
             </div>
           </div>
           <ul class="package-features">
             <li><strong>Everything in HomeCare Complete</strong></li>
             <li>Customized maintenance schedule &amp; mowing frequency</li>
-            <li>Multiple seasonal leaf-removal visits</li>
-            <li>Expanded exterior washing &amp; driveway allowances</li>
-            <li>Dedicated handyman &amp; maintenance labor</li>
-            <li>Seasonal prep &amp; contracted vacation checks</li>
-            <li>Dedicated post-storm property inspections</li>
-            <li>Highest-priority VIP scheduling &amp; response</li>
+            <li>Monthly leaf-removal &amp; cleanup visits throughout fall season</li>
+            <li>Driveway sealing credits as set by your Estate plan</li>
+            <li><strong>2 Dedicated vacation-home checks</strong></li>
+            <li><strong>3 Dedicated post-storm property evaluations</strong></li>
+            <li><strong>Up to 6 snow removal visits</strong> per winter season</li>
+            <li><strong>5 Handyman Pro Service Credits</strong> (5 hours on-site labor)</li>
+            <li><strong>Named account contact</strong> — direct line to your builder</li>
+            <li>2-business-hour response acknowledgment</li>
+            <li>Highest-priority VIP scheduling &amp; dedicated builder management</li>
           </ul>
           <a href="index.html#contact" class="package-enroll-btn">Enroll in Estate</a>
         </div>
+      </div>
+
+      <div class="hc-scope-notice">
+        <strong>Important Operating Note:</strong> Membership pricing covers defined, predictable preventive labor and scheduled visual inspections. It is not an unlimited repair plan or home warranty. Materials and out-of-scope repairs are billed separately at direct cost with your prior authorization. One Handyman Pro Service Credit = one hour of on-site labor. Credits are tracked per term year in 30-minute increments, do not carry over, and are forfeited on cancellation. Labor beyond included credits is billed at Restoricon's standard rate of $100/hour.
       </div>
     </section>
 
     <!-- Complexity Tiers Section -->
     <section class="homecare-tiers-section">
       <h2>Property Complexity &amp; Pricing Tiers</h2>
-      <p class="section-lead">Every home is unique. Our transparent pricing structure adjusts based on conditioned square footage, mowable turf, gutter footage, and property complexity so you only pay for your property's actual scope.</p>
+      <p class="section-lead">Every home is unique. Our transparent pricing structure adjusts based on conditioned square footage, mowable turf, gutter footage, and property complexity so you only pay for your property's actual scope. Where the lot-size tier and the 25-point complexity score differ, the higher tier governs.</p>
 
       <div class="tiers-table-wrap">
         <table class="tiers-table">
@@ -372,8 +825,8 @@
             <tr>
               <th>Tier</th>
               <th>Typical Lot Size</th>
-              <th>Mowable Turf Area</th>
-              <th>Typical House Size &amp; Stories</th>
+              <th>Mowable Turf</th>
+              <th>House Size &amp; Stories</th>
               <th>Gutter Linear Footage</th>
               <th>Pricing Basis</th>
             </tr>
@@ -383,33 +836,33 @@
               <td><strong>Tier A</strong><br/><span style="font-size:0.8rem; color:#666;">Standard Residential</span></td>
               <td>Up to ¼ acre<br/><span style="font-size:0.75rem; color:#888;">(Up to ~10,890 sq ft)</span></td>
               <td>Up to 5,000 sq ft</td>
-              <td>Up to 2,200 sq ft<br/><span style="font-size:0.75rem; color:#888;">(1 to 2 stories)</span></td>
+              <td>Up to 2,200 sq ft<br/><span style="font-size:0.75rem; color:#888;">(1–2 stories)</span></td>
               <td>Up to 120 LF<br/><span style="font-size:0.75rem; color:#888;">(1–2 story safe access)</span></td>
               <td><strong>Base Starting Price</strong><br/><span style="font-size:0.78rem; color:#C5A059; font-weight:700;">$179 / $399 / $599 / $999</span></td>
             </tr>
             <tr>
               <td><strong>Tier B</strong><br/><span style="font-size:0.8rem; color:#666;">Residential+</span></td>
-              <td>¼ to ½ acre<br/><span style="font-size:0.75rem; color:#888;">(~10,890 – 21,780 sq ft)</span></td>
-              <td>5,000 – 12,000 sq ft</td>
-              <td>2,200 – 3,200 sq ft<br/><span style="font-size:0.75rem; color:#888;">(Up to 2.5 stories)</span></td>
-              <td>120 – 180 LF</td>
-              <td><strong>Baseline Adjusted</strong><br/><span style="font-size:0.78rem; color:#555;">Adjusted after measurement</span></td>
+              <td>Over ¼ to ½ acre<br/><span style="font-size:0.75rem; color:#888;">(~10,890–21,780 sq ft)</span></td>
+              <td>5,000–12,000 sq ft</td>
+              <td>2,200–3,200 sq ft<br/><span style="font-size:0.75rem; color:#888;">(Up to 2.5 stories)</span></td>
+              <td>120–180 LF</td>
+              <td><strong>1.25× Tier A</strong><br/><span style="font-size:0.78rem; color:#555;">Confirmed after measurement</span></td>
             </tr>
             <tr>
               <td><strong>Tier C</strong><br/><span style="font-size:0.8rem; color:#666;">Large Property</span></td>
-              <td>½ to 1 acre<br/><span style="font-size:0.75rem; color:#888;">(~21,780 – 43,560 sq ft)</span></td>
-              <td>12,000 – 25,000 sq ft</td>
-              <td>3,200 – 4,500 sq ft<br/><span style="font-size:0.75rem; color:#888;">(2 to 3 stories)</span></td>
-              <td>180 – 260 LF</td>
-              <td><strong>Custom Calculated</strong><br/><span style="font-size:0.78rem; color:#555;">Adjusted after measurement</span></td>
+              <td>Over ½ to 1 acre<br/><span style="font-size:0.75rem; color:#888;">(~21,780–43,560 sq ft)</span></td>
+              <td>12,000–25,000 sq ft</td>
+              <td>3,200–4,500 sq ft<br/><span style="font-size:0.75rem; color:#888;">(2–3 stories)</span></td>
+              <td>180–260 LF</td>
+              <td><strong>1.60× Tier A</strong><br/><span style="font-size:0.78rem; color:#555;">Custom calculated</span></td>
             </tr>
             <tr>
               <td><strong>Tier D</strong><br/><span style="font-size:0.8rem; color:#666;">Executive Estate</span></td>
               <td>1 to 2 acres</td>
-              <td>25,000 – 50,000 sq ft</td>
+              <td>25,000–50,000 sq ft</td>
               <td>4,500+ sq ft<br/><span style="font-size:0.75rem; color:#888;">(Complex roofline/valleys)</span></td>
               <td>260+ LF<br/><span style="font-size:0.75rem; color:#888;">(Multi-level access)</span></td>
-              <td><strong>Custom Quote</strong><br/><span style="font-size:0.78rem; color:#555;">Based on labor &amp; equipment</span></td>
+              <td><strong>2.10× Tier A</strong><br/><span style="font-size:0.78rem; color:#555;">Based on labor &amp; equipment</span></td>
             </tr>
             <tr>
               <td><strong>Estate Tier</strong><br/><span style="font-size:0.8rem; color:#666;">Complex / Multi-Structure</span></td>
@@ -417,15 +870,15 @@
               <td>50,000+ sq ft turf</td>
               <td>5,000+ sq ft<br/><span style="font-size:0.75rem; color:#888;">(Guest house / outbuildings)</span></td>
               <td>Full Property Perimeter</td>
-              <td><strong>White-Glove Plan</strong><br/><span style="font-size:0.78rem; color:#C5A059; font-weight:700;">Dedicated Management</span></td>
+              <td><strong>White-Glove Plan</strong><br/><span style="font-size:0.78rem; color:#C5A059; font-weight:700;">Custom Quote</span></td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <!-- 5 Complexity Factors -->
-      <h3 style="text-align: center; color: var(--navy); font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.5rem;">How Property Complexity is Measured (25-Point Assessment)</h3>
-      <p style="text-align: center; max-width: 720px; margin: 0 auto 1.5rem; color: var(--charcoal); font-size: 0.92rem;">During your initial baseline walkthrough, our lead technician scores five physical property factors (1 to 5 points each) to confirm your exact plan tier:</p>
+      <h3 style="text-align: center; color: var(--navy); font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 0.5rem;">How Property Complexity is Measured — 25-Point Assessment</h3>
+      <p style="text-align: center; max-width: 720px; margin: 0 auto 1.5rem; color: var(--charcoal); font-size: 0.92rem;">During your initial baseline walkthrough, our lead technician scores five physical property factors (1 to 5 points each) to confirm your exact plan tier. If your complexity score places you in a higher tier than your lot size, the higher tier governs.</p>
       
       <div class="complexity-grid">
         <div class="complexity-card">
@@ -442,7 +895,7 @@
         </div>
         <div class="complexity-card">
           <h4>4. Seasonal Leaf &amp; Debris Load</h4>
-          <p>Deciduous mature tree canopy coverage and estimated seasonal spring/fall cleanup volume.</p>
+          <p>Deciduous mature tree canopy coverage and estimated seasonal spring/fall cleanup volume for both visits.</p>
         </div>
         <div class="complexity-card">
           <h4>5. Access &amp; Driveway Area</h4>
@@ -452,7 +905,7 @@
 
       <!-- Plan Comparison Matrix -->
       <h3 style="text-align: center; color: var(--navy); font-size: 1.4rem; margin-top: 3rem; margin-bottom: 0.5rem;">Comprehensive Membership Plan Comparison</h3>
-      <p style="text-align: center; max-width: 720px; margin: 0 auto 1.5rem; color: var(--charcoal); font-size: 0.92rem;">Direct feature comparison from the Restoricon HomeCare Program Manual:</p>
+      <p style="text-align: center; max-width: 720px; margin: 0 auto 1.5rem; color: var(--charcoal); font-size: 0.92rem;">Feature-by-feature comparison directly from the Restoricon HomeCare Program Manual (v2.1):</p>
 
       <div class="tiers-table-wrap">
         <table class="comparison-table">
@@ -468,16 +921,16 @@
           <tbody>
             <tr>
               <td><strong>Seasonal Property Assessments</strong></td>
+              <td>1 per year</td>
               <td>2 per year</td>
-              <td>4 per year (Quarterly)</td>
-              <td>4 per year (Quarterly)</td>
-              <td>4+ Custom Schedule</td>
+              <td>2 per year</td>
+              <td>2+ Custom Schedule</td>
             </tr>
             <tr>
               <td><strong>Gutter Cleaning &amp; Downspouts</strong></td>
-              <td><span class="badge-included">2× per year</span></td>
-              <td><span class="badge-included">2× per year</span></td>
-              <td><span class="badge-included">2× per year</span></td>
+              <td><span class="badge-included">1× per year (Spring)</span></td>
+              <td><span class="badge-included">1× per year</span></td>
+              <td><span class="badge-included">1× per year</span></td>
               <td><span class="badge-vip">Expanded Schedule</span></td>
             </tr>
             <tr>
@@ -502,32 +955,39 @@
               <td><span class="badge-vip">Included</span></td>
             </tr>
             <tr>
-              <td><strong>Lawn Mowing (Growing Season)</strong></td>
-              <td>—</td>
-              <td><span class="badge-included">Scheduled Included</span></td>
-              <td><span class="badge-included">Scheduled Included</span></td>
-              <td><span class="badge-vip">Custom Frequency</span></td>
-            </tr>
-            <tr>
-              <td><strong>String Trimming &amp; Precision Edging</strong></td>
-              <td>—</td>
+              <td><strong>Smoke &amp; CO Detector Check</strong></td>
+              <td><span class="badge-included">Included</span></td>
               <td><span class="badge-included">Included</span></td>
               <td><span class="badge-included">Included</span></td>
               <td><span class="badge-vip">Included</span></td>
             </tr>
             <tr>
+              <td><strong>Lawn Mowing (Growing Season)</strong></td>
+              <td>—</td>
+              <td><span class="badge-included">Bi-weekly (up to 14/season)</span></td>
+              <td><span class="badge-included">Weekly (up to 28/season)</span></td>
+              <td><span class="badge-vip">Custom Frequency</span></td>
+            </tr>
+            <tr>
+              <td><strong>String Trimming &amp; Precision Edging</strong></td>
+              <td>—</td>
+              <td><span class="badge-included">Every mow visit</span></td>
+              <td><span class="badge-included">Every mow visit</span></td>
+              <td><span class="badge-vip">Every mow visit</span></td>
+            </tr>
+            <tr>
               <td><strong>Spring Yard Cleanup &amp; Debris</strong></td>
               <td>—</td>
-              <td><span class="badge-included">Included</span></td>
-              <td><span class="badge-included">Expanded Included</span></td>
-              <td><span class="badge-vip">Expanded Included</span></td>
+              <td><span class="badge-included">1 visit</span></td>
+              <td><span class="badge-included">1 visit</span></td>
+              <td><span class="badge-vip">1 visit</span></td>
             </tr>
             <tr>
               <td><strong>Fall Leaf Removal</strong></td>
               <td>—</td>
-              <td><span class="badge-included">Seasonal Included</span></td>
-              <td><span class="badge-included">Expanded Included</span></td>
-              <td><span class="badge-vip">Multi-Visit Priority</span></td>
+              <td><span class="badge-included">Up to 2 visits</span></td>
+              <td><span class="badge-included">Up to 2 visits</span></td>
+              <td><span class="badge-vip">Monthly visits all fall</span></td>
             </tr>
             <tr>
               <td><strong>Whole-House Soft Wash</strong></td>
@@ -544,46 +1004,130 @@
               <td><span class="badge-vip">Included</span></td>
             </tr>
             <tr>
-              <td><strong>Driveway Sealing</strong></td>
+              <td><strong>Driveway Sealing Credit</strong></td>
               <td>Member Pricing</td>
               <td>Member Pricing</td>
-              <td><span class="badge-allowance">Maintenance Allowance</span></td>
-              <td><span class="badge-vip">Scheduled Allowance</span></td>
+              <td><span class="badge-allowance">1 Credit (1 hour labor)</span></td>
+              <td><span class="badge-vip">Custom Plan Credits</span></td>
             </tr>
             <tr>
-              <td><strong>Minor Maintenance &amp; Handyman Labor</strong></td>
-              <td>Limited</td>
-              <td><span class="badge-included">Included</span></td>
-              <td><span class="badge-allowance">Expanded Allowance</span></td>
-              <td><span class="badge-vip">Dedicated Handyman Hours</span></td>
-            </tr>
-            <tr>
-              <td><strong>Paint Touch-Up &amp; Caulking Allowance</strong></td>
+              <td><strong>Snow Removal (1″+ qualifying events)</strong></td>
               <td>—</td>
-              <td><span class="badge-allowance">Included Allowance</span></td>
-              <td><span class="badge-allowance">Expanded Allowance</span></td>
-              <td><span class="badge-vip">Expanded Allowance</span></td>
+              <td>—</td>
+              <td><span class="badge-included">Up to 2 visits/season</span></td>
+              <td><span class="badge-vip">Up to 6 visits/season</span></td>
             </tr>
             <tr>
-              <td><strong>Post-Storm Property Assessment</strong></td>
+              <td><strong>Handyman Pro Service Credits</strong></td>
+              <td>—</td>
+              <td><span class="badge-allowance">1 Credit (1 hour)</span></td>
+              <td><span class="badge-allowance">2 Credits (2 hours)</span></td>
+              <td><span class="badge-vip">5 Credits (5 hours)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Vacation-Home Checks</strong></td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td><span class="badge-vip">2 Dedicated Checks</span></td>
+            </tr>
+            <tr>
+              <td><strong>Post-Storm Property Evaluations</strong></td>
               <td>Priority</td>
               <td>Priority</td>
               <td><span class="badge-vip">VIP Dedicated</span></td>
-              <td><span class="badge-vip">VIP Priority</span></td>
+              <td><span class="badge-vip">3 Dedicated Evaluations</span></td>
+            </tr>
+            <tr>
+              <td><strong>Named Account Contact</strong></td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td><span class="badge-vip">Yes — Direct Builder Line</span></td>
             </tr>
             <tr>
               <td><strong>Restoration &amp; Emergency Response</strong></td>
-              <td>Priority Response</td>
-              <td>Priority Response</td>
-              <td><span class="badge-vip">VIP Priority</span></td>
-              <td><span class="badge-vip">Highest Priority</span></td>
+              <td>Priority (24 hr)</td>
+              <td>Priority (12 hr)</td>
+              <td><span class="badge-vip">VIP Priority (6 hr)</span></td>
+              <td><span class="badge-vip">Highest Priority (4 hr)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Approximate Annual Visits</strong></td>
+              <td>~2 visits/year</td>
+              <td>~19 visits/year</td>
+              <td>~38 visits/year</td>
+              <td>Per custom plan</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="assessment-credit-box">
-        <strong>Initial Property Assessment &amp; Measurement Fee:</strong> $199–$299 fee covers your complete on-site baseline inspection, photo documentation, and complexity calculation. When you enroll in an annual membership plan, <strong>100% of this fee is credited toward your membership</strong>.
+        <strong>Initial Property Assessment &amp; Measurement Fee:</strong> $199–$299 fee covers your complete on-site baseline inspection, Wash Scope Baseline measurement, photo documentation, and 25-point complexity calculation. When you enroll in an annual membership plan, <strong>100% of this fee is credited toward your membership</strong>.
+      </div>
+    </section>
+
+    <!-- Service Level Standards -->
+    <section class="sls-section">
+      <h2>Service Level Commitments</h2>
+      <p class="section-subtitle">These are the response commitments behind "priority" and "VIP" — measured in business hours and days, excluding Sundays and Connecticut legal holidays. Response means Restoricon has made contact and scheduled or begun action.</p>
+      <div class="sls-table-wrap">
+        <table class="sls-table" aria-label="Service Level Standards by Membership Tier">
+          <thead>
+            <tr>
+              <th>Commitment</th>
+              <th>Basic</th>
+              <th>Plus</th>
+              <th>Complete</th>
+              <th>Estate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acknowledge call or email</td>
+              <td>1 business day</td>
+              <td>1 business day</td>
+              <td>4 business hours</td>
+              <td>2 business hours</td>
+            </tr>
+            <tr>
+              <td>Schedule approved non-emergency work</td>
+              <td>10 business days</td>
+              <td>7 business days</td>
+              <td>4 business days</td>
+              <td>2 business days</td>
+            </tr>
+            <tr>
+              <td>Respond to reported emergency (active leak, storm, freeze)</td>
+              <td>Within 24 hours</td>
+              <td>Within 12 hours</td>
+              <td>Within 6 hours</td>
+              <td>Within 4 hours</td>
+            </tr>
+            <tr>
+              <td>Deliver Home Health Report after Seasonal Assessment</td>
+              <td>5 business days</td>
+              <td>5 business days</td>
+              <td>3 business days</td>
+              <td>2 business days</td>
+            </tr>
+            <tr>
+              <td>Deliver Service Visit Record after routine visit</td>
+              <td>3 business days</td>
+              <td>3 business days</td>
+              <td>2 business days</td>
+              <td>1 business day</td>
+            </tr>
+            <tr>
+              <td>Named dedicated account contact</td>
+              <td><span class="sls-badge-no">—</span></td>
+              <td><span class="sls-badge-no">—</span></td>
+              <td><span class="sls-badge-no">—</span></td>
+              <td><span class="sls-badge-yes">Yes</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -594,7 +1138,7 @@
       <div class="process-row">
         <div class="process-text">
           <h3>1. Intake &amp; Baseline Assessment</h3>
-          <p>Before service begins, a Restoricon technician conducts a thorough property walkthrough — documenting rooflines, siding, gutters, HVAC drains, sump pumps, foundation grading, and moisture indicators to create your home's initial condition baseline.</p>
+          <p>Before service begins, a Restoricon technician conducts a thorough property walkthrough — documenting rooflines, siding, gutters, HVAC drains, sump pumps, foundation grading, and moisture indicators. We record your Wash Scope Baseline (surface area, included structures) and complete the 25-point complexity scoring to assign your exact plan tier. This is your home's permanent condition baseline — every future visit is compared against it.</p>
         </div>
         <img src="assets/images/homecare/homecare-inspection.jpg" alt="Restoricon technician with a clipboard conducting an intake consultation with a homeowner" loading="lazy" width="1200" height="800">
       </div>
@@ -602,7 +1146,7 @@
       <div class="process-row reverse">
         <div class="process-text">
           <h3>2. Exterior Envelope &amp; Roofline Protection</h3>
-          <p>We keep your building envelope watertight with scheduled gutter cleanings, downspout clearing, window and exterior door seal checks, and siding evaluations. Higher tiers include soft washing and driveway pressure washing to prevent biological buildup.</p>
+          <p>We keep your building envelope watertight with scheduled gutter cleanings, downspout clearing, window and exterior door seal checks, and full siding evaluations from ground level. Complete and Estate tiers include annual whole-house soft washing and driveway pressure washing to prevent biological buildup, extend surface life, and maintain curb appeal. All wash work is performed against your recorded Wash Scope Baseline — no scope creep, no surprise invoices.</p>
         </div>
         <img src="assets/images/homecare/homecare-exterior.jpg" alt="Pristine residential exterior and roofline with clean gutters" loading="lazy" width="1000" height="667">
       </div>
@@ -610,15 +1154,15 @@
       <div class="process-row">
         <div class="process-text">
           <h3>3. Regular Lawn &amp; Grounds Care</h3>
-          <p>Under Plus, Complete, and Estate packages, your grounds receive weekly or bi-weekly mowing, sharp edging along driveways and walkways, string trimming, hard-surface blow-offs, and complete seasonal spring and fall cleanups.</p>
+          <p>Under Plus, Complete, and Estate packages, your grounds receive bi-weekly or weekly mowing (April 15 – October 31), sharp precision edging along driveways and walkways, string trimming, hard-surface blow-offs, and complete spring and fall seasonal cleanups. The mowing season may shift up to three weeks in either direction based on actual growing conditions. Visits missed due to drought dormancy or saturated ground are not carried over.</p>
         </div>
         <img src="assets/images/homecare/homecare-lawn.jpg" alt="Nicely mowed green grass lawn with clean edges and healthy turf" loading="lazy" width="1200" height="800">
       </div>
 
       <div class="process-row reverse">
         <div class="process-text">
-          <h3>4. Critical Mechanical &amp; Freeze Checks</h3>
-          <p>We inspect sump pump operation, clear HVAC condensate drain lines, clean dryer vents to reduce fire hazards, and winterize hose bibs and exterior water lines before Connecticut freezing weather arrives.</p>
+          <h3>4. Critical Mechanical &amp; Freeze Protection Checks</h3>
+          <p>We inspect sump pump operation and float function, clear HVAC condensate drain lines, clean dryer vents to reduce fire hazards, and winterize hose bibs and exterior water lines before Connecticut's freezing temperatures arrive. We also perform a water heater area and visible plumbing leak review, basement and crawlspace moisture check, and visual smoke and CO detector test — the small checks that catch big problems early.</p>
         </div>
         <img src="assets/images/homecare/homecare-mechanics.jpg" alt="Residential utility area with plumbing and HVAC maintenance" loading="lazy" width="1000" height="668">
       </div>
@@ -626,9 +1170,347 @@
       <div class="process-row">
         <div class="process-text">
           <h3>5. Digital Home Health Report &amp; Early Action</h3>
-          <p>After every visit, you receive a detailed digital Home Health Report with color-coded observations (Green / Yellow / Orange / Red), timestamped photos, completed tasks, and clear recommendations before minor concerns escalate into major damage.</p>
+          <p>After every seasonal assessment, you receive a detailed digital Home Health Report with color-coded observations — <strong>Green</strong> (all clear), <strong>Yellow</strong> (monitor), <strong>Orange</strong> (address soon), <strong>Red</strong> (urgent action needed) — plus timestamped photos, completed task records, and clear recommendations. Routine visit Service Visit Records are delivered within 1–3 business days. Your full report history is accessible through the <a href="https://portal.restoricon.com" target="_blank" rel="noopener">Customer Portal</a>.</p>
         </div>
         <img src="assets/images/homecare/homecare-report.jpg" alt="Restoricon digital Home Health Report showing property condition score, service logs, and maintenance recommendations" loading="lazy" width="1200" height="800">
+      </div>
+    </section>
+
+    <!-- Seasonal Service Calendar -->
+    <section class="hc-calendar-section">
+      <h2>Annual Service Calendar</h2>
+      <p class="section-subtitle">When to expect each service throughout the year — Tier A property reference. Exact scheduling is confirmed at your Initial Property Assessment.</p>
+      <div class="calendar-grid">
+        <div class="calendar-card">
+          <div class="calendar-month">Spring — April / May</div>
+          <h4>Property Wakeup</h4>
+          <ul class="calendar-tasks">
+            <li>Spring Seasonal Assessment &amp; Home Health Report</li>
+            <li>Gutter cleaning &amp; downspout clearing</li>
+            <li>Spring yard cleanup &amp; debris removal</li>
+            <li>Mowing season begins (April 15)</li>
+            <li>Whole-house soft wash (Complete / Estate)</li>
+            <li>Driveway pressure washing (Complete / Estate)</li>
+          </ul>
+        </div>
+        <div class="calendar-card">
+          <div class="calendar-month">Summer — June / July / August</div>
+          <h4>Active Grounds Season</h4>
+          <ul class="calendar-tasks">
+            <li>Weekly or bi-weekly mowing visits</li>
+            <li>String trimming, edging &amp; blow-off every visit</li>
+            <li>Driveway sealing (Complete / Estate, Jun–Sep)</li>
+            <li>Pool services if Add-On enrolled</li>
+            <li>Post-storm assessment as needed</li>
+          </ul>
+        </div>
+        <div class="calendar-card">
+          <div class="calendar-month">Fall — October / November</div>
+          <h4>Winterization &amp; Cleanup</h4>
+          <ul class="calendar-tasks">
+            <li>Fall Seasonal Assessment &amp; Home Health Report</li>
+            <li>Fall leaf removal visits</li>
+            <li>Dryer-vent cleaning &amp; lint removal</li>
+            <li>Hose-bib &amp; exterior water-line winterization</li>
+            <li>Window &amp; door seal assessment</li>
+            <li>Moisture &amp; water-intrusion check</li>
+            <li>Mowing season ends (October 31)</li>
+          </ul>
+        </div>
+        <div class="calendar-card">
+          <div class="calendar-month">Winter — December / January / February / March</div>
+          <h4>Year-Round Protection</h4>
+          <ul class="calendar-tasks">
+            <li>Sump-pump operational check</li>
+            <li>HVAC condensate drain check</li>
+            <li>Smoke &amp; CO detector visual test</li>
+            <li>Snow removal visits (Complete / Estate)</li>
+            <li>Vacation-home checks (Estate)</li>
+            <li>Handyman credit labor as needed</li>
+            <li>Year-round priority emergency response</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional Add-On Services -->
+    <section class="addons-section">
+      <h2>Optional Add-On Services</h2>
+      <p class="section-subtitle">Available to any HomeCare member — Basic, Plus, Complete, or Estate. Add-ons are billed separately from the membership fee, require a signed Add-On Addendum, and are recorded in your member agreement so your total recurring commitment is in one place.</p>
+
+      <div class="addons-grid">
+        <!-- Pool Services -->
+        <div class="addon-card">
+          <div class="addon-card-header">
+            <span class="addon-card-icon">🏊</span>
+            <div>
+              <h3>Pool Services</h3>
+              <p>Routine pool cleaning &amp; upkeep</p>
+            </div>
+          </div>
+          <div class="addon-card-body">
+            <p style="font-size:0.85rem; color:#555; margin:0 0 1rem; line-height:1.5;">Routine service includes: surface skimming, chemical testing &amp; balancing, skimmer &amp; pump basket cleaning, wall &amp; tile brushing, and visual equipment check. In-season billing only (typically May–September).</p>
+            <ul class="addon-services-list">
+              <li>
+                <span class="addon-service-name">Weekly pool maintenance (in-season)</span>
+                <span class="addon-service-price">$300–$400/mo</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Per-visit full service</span>
+                <span class="addon-service-price">$75–$150+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Green pool recovery (defined scope)</span>
+                <span class="addon-service-price">$300–$600+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Pool opening</span>
+                <span class="addon-service-price">$250–$400+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Pool closing / winterization</span>
+                <span class="addon-service-price">$200–$400+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Filter cleaning</span>
+                <span class="addon-service-price">$75–$175</span>
+              </li>
+            </ul>
+            <p class="addon-note">Chemicals billed at direct cost + 25% sourcing fee unless homeowner supplies. Pool equipment repair is not included — quoted separately as needed.</p>
+          </div>
+        </div>
+
+        <!-- Car Detailing -->
+        <div class="addon-card">
+          <div class="addon-card-header">
+            <span class="addon-card-icon">🚗</span>
+            <div>
+              <h3>Car Detailing</h3>
+              <p>Vehicle exterior &amp; interior detailing at your property</p>
+            </div>
+          </div>
+          <div class="addon-card-body">
+            <ul class="addon-services-list">
+              <li>
+                <span class="addon-service-name">Exterior-only detail</span>
+                <span class="addon-service-price">$100–$150</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Interior-only detail</span>
+                <span class="addon-service-price">$150–$225</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Basic inside + outside</span>
+                <span class="addon-service-price">$175–$225</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Full detail</span>
+                <span class="addon-service-price">$250–$350</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Heavy interior / pet hair / stains</span>
+                <span class="addon-service-price">$300–$450+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Paint correction</span>
+                <span class="addon-service-price">$350–$600+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Ceramic coating</span>
+                <span class="addon-service-price">$600–$1,500+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Luxury / high-end correction + coating</span>
+                <span class="addon-service-price">$1,000–$2,500+</span>
+              </li>
+            </ul>
+            <p class="addon-note">Performed at your property. Final pricing based on vehicle size, condition, and selected options. Paint depth measured and recorded before any correction work begins.</p>
+          </div>
+        </div>
+
+        <!-- House Cleaning -->
+        <div class="addon-card">
+          <div class="addon-card-header">
+            <span class="addon-card-icon">🧹</span>
+            <div>
+              <h3>House Cleaning</h3>
+              <p>Recurring interior cleaning &amp; specialty cleans</p>
+            </div>
+          </div>
+          <div class="addon-card-body">
+            <p style="font-size:0.85rem; color:#555; margin:0 0 0.8rem; line-height:1.5;">Three recurring tiers — Basic, Plus, Premium — plus one-time specialty options. First-time visits are always quoted as a Deep Clean. Prices below are <strong>per visit</strong>.</p>
+            <table style="width:100%; font-size:0.82rem; border-collapse:collapse; margin-bottom:1rem;">
+              <thead>
+                <tr>
+                  <th style="text-align:left; padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:var(--navy);">Home Size</th>
+                  <th style="padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:var(--navy);">Basic</th>
+                  <th style="padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:var(--navy);">Plus</th>
+                  <th style="padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:var(--navy);">Premium</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Studio / 1 BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$110–$140</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$150–$190</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$220–$280</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">2–3 BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$150–$180</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$200–$250</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$300–$380</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">3–4 BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$200–$260</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$270–$330</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$380–$460</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">4–5 BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$260–$330</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$340–$420</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$460–$580</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.4rem 0.3rem; color:#444;">5+ BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem;">$330–$400+</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem;">$420–$500+</td>
+                  <td style="text-align:center; padding:0.4rem 0.3rem;">$580–$700+</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="addon-services-list">
+              <li>
+                <span class="addon-service-name">Deep cleaning (all first-time visits)</span>
+                <span class="addon-service-price">$250–$450+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Move-in / move-out cleaning</span>
+                <span class="addon-service-price">$250–$600+</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Post-construction cleaning</span>
+                <span class="addon-service-price">$300–$750+</span>
+              </li>
+            </ul>
+            <p class="addon-note">Recurring discount: 10% off weekly; 5% off bi-weekly. Supplies &amp; equipment provided. Fully insured personnel. CT sales tax applied at invoicing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A La Carte Services -->
+    <section class="alacarte-section">
+      <h2>Individual Services — Available Without a Membership</h2>
+      <p class="section-subtitle">No membership required. Non-members can book any service à la carte. Members receive these services within their tier; work beyond tier scope is quoted at these rates. All prices are for Tier A properties — larger properties adjusted per the complexity multiplier schedule.</p>
+
+      <div class="alacarte-grid">
+        <div class="alacarte-card">
+          <h3>Lawn &amp; Grounds</h3>
+          <ul class="alacarte-list">
+            <li>
+              <span class="alacarte-service">Lawn mowing (per visit)</span>
+              <span class="alacarte-price">$45–$75</span>
+            </li>
+            <li>
+              <span class="alacarte-service">String trimming &amp; edging (per visit)</span>
+              <span class="alacarte-price">$35–$65</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Hard-surface blow-off (per visit)</span>
+              <span class="alacarte-price">$25–$45</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Spring yard cleanup</span>
+              <span class="alacarte-price">$150–$350</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Fall leaf removal (per visit)</span>
+              <span class="alacarte-price">$150–$400</span>
+            </li>
+          </ul>
+        </div>
+        <div class="alacarte-card">
+          <h3>Exterior Home Care &amp; Washing</h3>
+          <ul class="alacarte-list">
+            <li>
+              <span class="alacarte-service">Gutter cleaning &amp; downspout clearing</span>
+              <span class="alacarte-price">$125–$250</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Whole-house soft wash</span>
+              <span class="alacarte-price">$300–$600</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Driveway pressure washing</span>
+              <span class="alacarte-price">$150–$300</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Driveway sealing (labor; sealer separate)</span>
+              <span class="alacarte-price">$150–$350</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Snow removal / plowing (per visit)</span>
+              <span class="alacarte-price">$50–$150</span>
+            </li>
+          </ul>
+        </div>
+        <div class="alacarte-card">
+          <h3>Preventive Home Maintenance</h3>
+          <ul class="alacarte-list">
+            <li>
+              <span class="alacarte-service">Dryer-vent cleaning &amp; lint removal</span>
+              <span class="alacarte-price">$125–$200</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Sump-pump operational &amp; float check</span>
+              <span class="alacarte-price">$75–$125</span>
+            </li>
+            <li>
+              <span class="alacarte-service">HVAC condensate / drain line check</span>
+              <span class="alacarte-price">$75–$125</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Water heater &amp; plumbing leak review</span>
+              <span class="alacarte-price">$75–$125</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Hose-bib winterization</span>
+              <span class="alacarte-price">$75–$150</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Window &amp; door seal check</span>
+              <span class="alacarte-price">$75–$125</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Full seasonal property assessment</span>
+              <span class="alacarte-price">$199–$299</span>
+            </li>
+          </ul>
+        </div>
+        <div class="alacarte-card">
+          <h3>Handyman &amp; Property Checks</h3>
+          <ul class="alacarte-list">
+            <li>
+              <span class="alacarte-service">Handyman labor (per hour)</span>
+              <span class="alacarte-price">$100/hr</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Vacation-home check (Estate add-on)</span>
+              <span class="alacarte-price">By quote</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Post-storm property evaluation</span>
+              <span class="alacarte-price">By quote</span>
+            </li>
+            <li>
+              <span class="alacarte-service">Emergency restoration response</span>
+              <span class="alacarte-price">By quote</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -639,12 +1521,12 @@
         <div class="catalog-card">
           <h3>Lawn &amp; Grounds</h3>
           <ul>
-            <li>Scheduled seasonal mowing</li>
+            <li>Bi-weekly or weekly seasonal mowing</li>
             <li>String trimming &amp; weed whacking</li>
-            <li>Walkway &amp; driveway edging</li>
+            <li>Precision walkway &amp; driveway edging</li>
             <li>Hard-surface clipping blow-off</li>
-            <li>Spring yard cleanup</li>
-            <li>Fall leaf removal &amp; debris clearing</li>
+            <li>Spring yard cleanup &amp; debris removal</li>
+            <li>Fall leaf removal &amp; grounds cleanup</li>
           </ul>
         </div>
         <div class="catalog-card">
@@ -652,32 +1534,56 @@
           <ul>
             <li>Gutter cleaning &amp; clearing</li>
             <li>Downspout flow verification</li>
-            <li>House soft washing (Complete/Estate)</li>
-            <li>Driveway pressure washing</li>
-            <li>Caulking &amp; weather-seal checks</li>
-            <li>Minor paint touch-ups</li>
+            <li>Annual whole-house soft wash (Complete / Estate)</li>
+            <li>Annual driveway pressure washing (Complete / Estate)</li>
+            <li>Driveway sealing credit (Complete / Estate)</li>
+            <li>Window &amp; exterior door seal checks</li>
           </ul>
         </div>
         <div class="catalog-card">
           <h3>Preventive Mechanics</h3>
           <ul>
-            <li>Annual dryer-vent cleanout</li>
-            <li>Sump-pump operational check</li>
+            <li>Annual dryer-vent cleanout &amp; lint removal</li>
+            <li>Sump-pump operational &amp; float check</li>
             <li>HVAC condensate drain check</li>
-            <li>Water-heater area leak review</li>
-            <li>Hose-bib winterization</li>
-            <li>Smoke / CO detector check</li>
+            <li>Water-heater area &amp; plumbing leak review</li>
+            <li>Hose-bib &amp; exterior water-line winterization</li>
+            <li>Smoke &amp; CO detector visual test</li>
+          </ul>
+        </div>
+        <div class="catalog-card">
+          <h3>Snow &amp; Storm Services</h3>
+          <ul>
+            <li>Snow removal (1″+ qualifying events)</li>
+            <li>Driveway &amp; primary walkway clearing</li>
+            <li>Post-storm property evaluation</li>
+            <li>Vacation-home checks (Estate)</li>
+            <li>Dedicated post-storm evaluations (Estate)</li>
+            <li>Emergency builder restoration dispatch</li>
           </ul>
         </div>
         <div class="catalog-card">
           <h3>Priority Builder Response</h3>
           <ul>
-            <li>Home Health Report with photos</li>
+            <li>Home Health Report with photos &amp; color codes</li>
+            <li>Service Visit Record after every routine visit</li>
             <li>Priority repair scheduling</li>
             <li>VIP emergency restoration response</li>
-            <li>Post-storm damage assessments</li>
-            <li>Dedicated builder oversight</li>
-            <li>Licensed CT General Contractor</li>
+            <li>Handyman Pro Service Credits</li>
+            <li>Licensed CT General Contractor (HIC.0706905)</li>
+          </ul>
+        </div>
+        <div class="catalog-card">
+          <h3>Optional Add-Ons</h3>
+          <ul>
+            <li>Pool cleaning &amp; chemical services</li>
+            <li>Green pool recovery</li>
+            <li>Pool opening &amp; closing / winterization</li>
+            <li>Vehicle exterior &amp; interior detailing</li>
+            <li>Paint correction &amp; ceramic coating</li>
+            <li>Recurring interior house cleaning</li>
+            <li>Deep cleaning, move-in / move-out cleaning</li>
+            <li>Post-construction cleaning</li>
           </ul>
         </div>
       </div>
@@ -690,7 +1596,7 @@
           <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
         </svg>
         <h2>Download the Full HomeCare Program Manual</h2>
-        <p>Review our complete 9-page guide covering customer agreements, detailed service scopes, internal inspection checklists, pricing complexity matrix, and operational standards.</p>
+        <p>Review our complete program guide covering customer agreements, detailed service scopes, the 25-point complexity scoring system, seasonal visit schedules, service level commitments, add-on terms, and operational standards — everything you need to understand exactly what your membership covers.</p>
         <a href="assets/documents/Restoricon_HomeCare_Combined_Manual.pdf" class="btn-download" download="Restoricon_HomeCare_Combined_Manual.pdf">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
@@ -705,15 +1611,17 @@
       <div class="boundaries-box">
         <h3>Program Scope &amp; Operating Transparency</h3>
         <p><strong>Predictable Preventive Labor:</strong> Restoricon HomeCare is a recurring property maintenance and visual assessment program designed to help homeowners prevent avoidable deterioration. It is not an insurance policy, home warranty, or unlimited repair contract.</p>
-        <p><strong>Materials &amp; Replacement Parts:</strong> Membership fees cover scheduled labor and defined inspection scopes. Materials, consumables, custom items, and replacement parts (e.g. specialty filters, batteries, plumbing fittings, electrical components) are billed separately at direct cost with prior homeowner authorization whenever practical.</p>
+        <p><strong>Materials &amp; Replacement Parts:</strong> Membership fees cover scheduled labor and defined inspection scopes. Materials, consumables, and replacement parts (e.g. specialty filters, batteries, plumbing fittings, electrical components) are billed at direct cost plus a 25–30% sourcing fee with prior homeowner authorization whenever practical.</p>
         <p><strong>Damage Discovery Protocol:</strong> If a technician identifies unexpected damage (e.g., hidden moisture, structural deflection, roof storm damage), work in the affected zone pauses and the homeowner is notified immediately with photo documentation and options for a separate repair quote or emergency builder response.</p>
+        <p><strong>Lawn Scheduling Notes:</strong> The growing season runs approximately April 15 – October 31, weather permitting. Visits missed due to drought dormancy, saturated ground, or conditions that would damage turf are not carried over and do not reduce the membership fee. Snow removal visits not performed in a season do not carry over and have no cash value.</p>
+        <p><strong>Growing Season Coverage Area:</strong> Included wash, mowing, and snow services cover the surfaces recorded in your Wash Scope Baseline at the Initial Property Assessment. Additional structures or surfaces are quoted separately.</p>
       </div>
     </section>
 
     <!-- CTA Section -->
     <section class="kitchen-cta">
       <h2>Ready to Put Your Property on Autopilot?</h2>
-      <p>Call <a href="tel:+18603371820">(860) 337-1820</a>, email <a href="mailto:contact@restoricon.com">contact@restoricon.com</a>, or request an initial property assessment today.</p>
+      <p>Call <a href="tel:+18603371820">(860) 337-1820</a>, email <a href="mailto:contact@restoricon.com">contact@restoricon.com</a>, or request your initial property assessment today. The $199–$299 assessment fee is <strong>100% credited</strong> when you enroll in a membership.</p>
       <a href="index.html#contact" class="cta-primary">Request a Property Assessment</a>
     </section>
 
@@ -723,7 +1631,7 @@
   <footer>
     <p>&copy; <span id="year"></span> Restoricon, LLC. All rights reserved. &bull; CT HIC.0706905</p>
     <p class="footer-links">
-      <a href="https://admin.restoricon.com" target="_blank" rel="noopener">Staff & Admin Login</a> &bull;
+      <a href="https://admin.restoricon.com" target="_blank" rel="noopener">Staff &amp; Admin Login</a> &bull;
       <a href="https://portal.restoricon.com" target="_blank" rel="noopener">Customer Portal</a> &bull;
       <a href="https://quote.restoricon.com" target="_blank" rel="noopener">Emergency Intake</a> &bull;
       <a href="index.html#homeowner-contract">Homeowner Contract</a>
@@ -740,27 +1648,6 @@
       </a>
     </div>
   </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <!-- RESTORICON AI Chat Widget -->
   <div class="chat-widget">
