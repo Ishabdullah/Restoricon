@@ -83,9 +83,9 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   height: 4.25rem;
-  max-width: var(--max-width);
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 3%;
 }
 .nav-brand-group {
   display: flex;
@@ -140,7 +140,7 @@ a:hover {
   color: #E2E8F0;
   font-weight: 500;
   font-size: 0.95rem;
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.5rem;
   text-decoration: none;
   transition: color 0.2s ease;
 }
