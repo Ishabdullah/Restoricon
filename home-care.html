@@ -253,10 +253,24 @@
     }
     .addons-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: 1.6rem;
       max-width: 1100px;
       margin: 0 auto;
+      align-items: stretch;
+    }
+    .addons-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+    .addons-col .addon-card {
+      flex: 1;
+    }
+    @media (max-width: 720px) {
+      .addons-grid {
+        grid-template-columns: 1fr;
+      }
     }
     .addon-card {
       background: #fff;
@@ -1224,6 +1238,7 @@
       <p class="section-subtitle">Available to any HomeCare member — Basic, Plus, Complete, or Estate. Add-ons are billed separately from the membership fee, require a signed Add-On Addendum, and are recorded in your member agreement so your total recurring commitment is in one place.</p>
 
       <div class="addons-grid">
+      <div class="addons-col">
         <!-- Pool Services -->
         <div class="addon-card">
           <div class="addon-card-header">
@@ -1312,7 +1327,9 @@
             <p class="addon-note">Performed at your property. Final pricing based on vehicle size, condition, and selected options. Paint depth measured and recorded before any correction work begins.</p>
           </div>
         </div>
+      </div><!-- /.addons-col (left) -->
 
+      <div class="addons-col">
         <!-- House Cleaning -->
         <div class="addon-card">
           <div class="addon-card-header">
@@ -1514,6 +1531,7 @@
             <p class="addon-note">Supplies &amp; equipment provided. Fully insured personnel. "Substantial" dishwashing (full sink/counter or 20+ min hand-washing) is an add-on at any tier. CT sales tax applied at invoicing.</p>
           </div>
         </div>
+      </div><!-- /.addons-col (right) -->
       </div>
     </section>
 
