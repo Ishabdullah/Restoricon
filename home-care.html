@@ -1323,52 +1323,183 @@
             </div>
           </div>
           <div class="addon-card-body">
-            <p style="font-size:0.85rem; color:#555; margin:0 0 0.8rem; line-height:1.5;">Three recurring tiers — Basic, Plus, Premium — plus one-time specialty options. First-time visits are always quoted as a Deep Clean. Prices below are <strong>per visit</strong>.</p>
-            <table style="width:100%; font-size:0.82rem; border-collapse:collapse; margin-bottom:1rem;">
+            <p style="font-size:0.85rem; color:#555; margin:0 0 0.8rem; line-height:1.5;">Three recurring tiers — Basic, Plus, Premium — plus one-time specialty options. First-time visits are always quoted as a Deep Clean. Prices below are <strong>per visit</strong>, not per month.</p>
+
+            <!-- Per-visit pricing table -->
+            <table style="width:100%; font-size:0.82rem; border-collapse:collapse; margin-bottom:0.6rem;">
               <thead>
-                <tr>
-                  <th style="text-align:left; padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:var(--navy);">Home Size</th>
-                  <th style="padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:var(--navy);">Basic</th>
-                  <th style="padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:var(--navy);">Plus</th>
-                  <th style="padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:var(--navy);">Premium</th>
+                <tr style="background:rgba(10,25,47,0.04);">
+                  <th style="text-align:left; padding:0.45rem 0.4rem; border-bottom:2px solid rgba(10,25,47,0.12); color:#0A192F; font-weight:700;">Home Size</th>
+                  <th style="text-align:center; padding:0.45rem 0.4rem; border-bottom:2px solid rgba(10,25,47,0.12); color:#0A192F; font-weight:700;">Basic</th>
+                  <th style="text-align:center; padding:0.45rem 0.4rem; border-bottom:2px solid rgba(10,25,47,0.12); color:#0A192F; font-weight:700;">Plus</th>
+                  <th style="text-align:center; padding:0.45rem 0.4rem; border-bottom:2px solid rgba(10,25,47,0.12); color:#0A192F; font-weight:700;">Premium</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style="padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Studio / 1 BR</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$110–$140</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$150–$190</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$220–$280</td>
+                  <td style="padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Studio / 1 BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$110–$140</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$150–$190</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$220–$280</td>
                 </tr>
                 <tr>
-                  <td style="padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">2–3 BR</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$150–$180</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$200–$250</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$300–$380</td>
+                  <td style="padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">2–3 BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$150–$180</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$200–$250</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$300–$380</td>
                 </tr>
                 <tr>
-                  <td style="padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">3–4 BR</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$200–$260</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$270–$330</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$380–$460</td>
+                  <td style="padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">3–4 BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$200–$260</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$270–$330</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$380–$460</td>
                 </tr>
                 <tr>
-                  <td style="padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">4–5 BR</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$260–$330</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$340–$420</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06);">$460–$580</td>
+                  <td style="padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">4–5 BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$260–$330</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$340–$420</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#333; font-weight:600;">$460–$580</td>
                 </tr>
                 <tr>
-                  <td style="padding:0.4rem 0.3rem; color:#444;">5+ BR</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem;">$330–$400+</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem;">$420–$500+</td>
-                  <td style="text-align:center; padding:0.4rem 0.3rem;">$580–$700+</td>
+                  <td style="padding:0.4rem 0.4rem; color:#444;">5+ BR</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; color:#333; font-weight:600;">$330–$400+</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; color:#333; font-weight:600;">$420–$500+</td>
+                  <td style="text-align:center; padding:0.4rem 0.4rem; color:#333; font-weight:600;">$580–$700+</td>
                 </tr>
               </tbody>
             </table>
+            <p style="font-size:0.78rem; color:#777; margin:0 0 0.9rem; line-height:1.5; font-style:italic;">Final pricing set at the Initial Property Assessment based on home size, condition, and selected tier. Billed separately from the membership fee. CT sales tax added at invoicing.</p>
+
+            <!-- Recurring discount callout -->
+            <div style="background:rgba(212,175,55,0.08); border-left:3px solid #D4AF37; border-radius:0 6px 6px 0; padding:0.55rem 0.85rem; margin-bottom:1rem;">
+              <p style="font-size:0.8rem; color:#444; margin:0; line-height:1.5;"><strong style="color:#0A192F;">Recurring discounts:</strong> <strong>10% off</strong> weekly &nbsp;&middot;&nbsp; <strong>5% off</strong> biweekly. One-time and monthly-frequency bookings are full price. Discount applies to the quoted per-visit price for your property.</p>
+            </div>
+
+            <!-- What's included by tier -->
+            <p style="font-size:0.82rem; font-weight:700; color:#0A192F; margin:0 0 0.4rem;">What's included by tier</p>
+            <table style="width:100%; font-size:0.79rem; border-collapse:collapse; margin-bottom:1rem;">
+              <thead>
+                <tr style="background:rgba(10,25,47,0.04);">
+                  <th style="text-align:left; padding:0.4rem 0.4rem; border-bottom:2px solid rgba(10,25,47,0.1); color:#0A192F; font-weight:700;">Task</th>
+                  <th style="text-align:center; padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:#0A192F; font-weight:700; white-space:nowrap;">Basic</th>
+                  <th style="text-align:center; padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:#0A192F; font-weight:700; white-space:nowrap;">Plus</th>
+                  <th style="text-align:center; padding:0.4rem 0.3rem; border-bottom:2px solid rgba(10,25,47,0.1); color:#0A192F; font-weight:700; white-space:nowrap;">Premium</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Vacuum &amp; mop all accessible floors</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Dusting of reachable surfaces</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Bathrooms — toilet, tub/shower, sink, mirror, floor</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Kitchen surfaces, sink, cooktop, appliance fronts</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Trash removal to bin</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Make beds (existing linens)</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#b45309; font-size:0.75rem; font-weight:600;">Add-on</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Change bed linens (linens left out by customer)</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Strip, remake &amp; launder bed linens</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Light dishes / load dishwasher</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Laundry, 1–2 loads, wash &amp; dry only</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#b45309; font-size:0.75rem; font-weight:600;">Add-on</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#444;">Fold &amp; put away laundry</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; border-bottom:1px solid rgba(10,25,47,0.06); color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+                <tr>
+                  <td style="padding:0.35rem 0.4rem; color:#444;">Detailed extras: baseboards, sills, cabinet fronts, appliance exteriors, light fixtures, door frames</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; color:#aaa;">—</td>
+                  <td style="text-align:center; padding:0.35rem 0.3rem; color:#16a34a; font-weight:700;">✓</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Add-on extras -->
+            <p style="font-size:0.82rem; font-weight:700; color:#0A192F; margin:0 0 0.4rem;">Add-on extras (any tier)</p>
+            <ul class="addon-services-list" style="margin-bottom:1rem;">
+              <li>
+                <span class="addon-service-name">Bed making — Basic tier only</span>
+                <span class="addon-service-price">$10–$15 / bed</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Laundry, first load — Plus tier</span>
+                <span class="addon-service-price">$25–$40 / load</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Extra laundry load — any tier</span>
+                <span class="addon-service-price">$25–$40 / load</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Substantial dishwashing</span>
+                <span class="addon-service-price">$25–$50</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Interior windows (reachable, no ladder)</span>
+                <span class="addon-service-price">$4–$8 / pane</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Inside oven</span>
+                <span class="addon-service-price">$35–$60</span>
+              </li>
+              <li>
+                <span class="addon-service-name">Inside refrigerator</span>
+                <span class="addon-service-price">$35–$60</span>
+              </li>
+            </ul>
+
+            <!-- One-time specialty cleaning -->
+            <p style="font-size:0.82rem; font-weight:700; color:#0A192F; margin:0 0 0.4rem;">One-time specialty cleaning</p>
             <ul class="addon-services-list">
               <li>
-                <span class="addon-service-name">Deep cleaning (all first-time visits)</span>
+                <span class="addon-service-name">Deep cleaning (includes all first-time visits)</span>
                 <span class="addon-service-price">$250–$450+</span>
               </li>
               <li>
@@ -1380,7 +1511,7 @@
                 <span class="addon-service-price">$300–$750+</span>
               </li>
             </ul>
-            <p class="addon-note">Recurring discount: 10% off weekly; 5% off bi-weekly. Supplies &amp; equipment provided. Fully insured personnel. CT sales tax applied at invoicing.</p>
+            <p class="addon-note">Supplies &amp; equipment provided. Fully insured personnel. "Substantial" dishwashing (full sink/counter or 20+ min hand-washing) is an add-on at any tier. CT sales tax applied at invoicing.</p>
           </div>
         </div>
       </div>
